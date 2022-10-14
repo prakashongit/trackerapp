@@ -1,0 +1,362 @@
+13:10:2022 15:21 [Information] (1) Now listening on: "https://[::]:443"
+13:10:2022 15:21 [Information] (1) Now listening on: "http://[::]:80"
+13:10:2022 15:21 [Information] (1) Application started. Press Ctrl+C to shut down.
+13:10:2022 15:21 [Information] (1) Hosting environment: "Development"
+13:10:2022 15:21 [Information] (1) Content root path: "/app"
+13:10:2022 15:21 [Information] (8) Request starting HTTP/2 GET https://localhost:49163/weatherforecast  
+13:10:2022 15:21 [Information] (8) Executing endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+13:10:2022 15:21 [Information] (8) Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[AuthMicroservice.WeatherForecast] Get()" on controller "AuthMicroservice.Controllers.WeatherForecastController" ("AuthMicroservice").
+13:10:2022 15:21 [Information] (8) Executing ObjectResult, writing value of type '"AuthMicroservice.WeatherForecast[]"'.
+13:10:2022 15:21 [Information] (8) Executed action "AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)" in 83.6651ms
+13:10:2022 15:21 [Information] (8) Executed endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+13:10:2022 15:21 [Information] (8) Request finished in 237.7794ms 200 application/json; charset=utf-8
+13:10:2022 15:21 [Information] (6) Request starting HTTP/2 GET https://localhost:49163/favicon.ico  
+13:10:2022 15:21 [Information] (6) Request finished in 3.7898ms 404 
+13:10:2022 15:21 [Information] (12) Request starting HTTP/1.1 GET https://localhost:49163/api/token?role=admin  
+13:10:2022 15:21 [Information] (12) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+13:10:2022 15:21 [Information] (12) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(System.String)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+13:10:2022 15:21 [Information] (12) Requested for token
+13:10:2022 15:21 [Information] (12) Executing ObjectResult, writing value of type '"System.String"'.
+13:10:2022 15:21 [Information] (12) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 357.5018ms
+13:10:2022 15:21 [Information] (12) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+13:10:2022 15:21 [Information] (12) Request finished in 383.637ms 200 text/plain; charset=utf-8
+13:10:2022 15:23 [Information] (2) Application is shutting down...
+14:10:2022 06:52 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 06:52 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 06:52 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 06:52 [Information] (1) Hosting environment: "Development"
+14:10:2022 06:52 [Information] (1) Content root path: "/app"
+14:10:2022 06:52 [Information] (2) Application is shutting down...
+14:10:2022 06:52 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 06:52 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 06:52 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 06:52 [Information] (1) Hosting environment: "Development"
+14:10:2022 06:52 [Information] (1) Content root path: "/app"
+14:10:2022 06:52 [Information] (4) Request starting HTTP/2 GET https://localhost:49155/weatherforecast  
+14:10:2022 06:52 [Information] (4) Executing endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 06:52 [Information] (4) Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[AuthMicroservice.WeatherForecast] Get()" on controller "AuthMicroservice.Controllers.WeatherForecastController" ("AuthMicroservice").
+14:10:2022 06:52 [Information] (4) Executing ObjectResult, writing value of type '"AuthMicroservice.WeatherForecast[]"'.
+14:10:2022 06:52 [Information] (4) Executed action "AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)" in 62.1994ms
+14:10:2022 06:52 [Information] (4) Executed endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 06:52 [Information] (4) Request finished in 274.3637ms 200 application/json; charset=utf-8
+14:10:2022 06:52 [Information] (7) Request starting HTTP/2 GET https://localhost:49155/favicon.ico  
+14:10:2022 06:52 [Information] (7) Request finished in 4.7744ms 404 
+14:10:2022 06:52 [Information] (10) Request starting HTTP/2 GET https://localhost:49155/weatherforecast  
+14:10:2022 06:52 [Information] (10) Executing endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 06:52 [Information] (10) Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[AuthMicroservice.WeatherForecast] Get()" on controller "AuthMicroservice.Controllers.WeatherForecastController" ("AuthMicroservice").
+14:10:2022 06:52 [Information] (10) Executing ObjectResult, writing value of type '"AuthMicroservice.WeatherForecast[]"'.
+14:10:2022 06:52 [Information] (10) Executed action "AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)" in 17.0926ms
+14:10:2022 06:52 [Information] (10) Executed endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 06:52 [Information] (10) Request finished in 46.6601ms 200 application/json; charset=utf-8
+14:10:2022 06:53 [Information] (12) Request starting HTTP/2 GET https://localhost:49155/api/GetUsers  
+14:10:2022 06:53 [Information] (12) Request finished in 3.7464ms 404 
+14:10:2022 06:53 [Information] (2) Application is shutting down...
+14:10:2022 06:53 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 06:53 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 06:53 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 06:53 [Information] (1) Hosting environment: "Development"
+14:10:2022 06:53 [Information] (1) Content root path: "/app"
+14:10:2022 06:53 [Information] (10) Request starting HTTP/2 GET https://localhost:49155/weatherforecast  
+14:10:2022 06:53 [Information] (10) Executing endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 06:53 [Information] (10) Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[AuthMicroservice.WeatherForecast] Get()" on controller "AuthMicroservice.Controllers.WeatherForecastController" ("AuthMicroservice").
+14:10:2022 06:53 [Information] (10) Executing ObjectResult, writing value of type '"AuthMicroservice.WeatherForecast[]"'.
+14:10:2022 06:53 [Information] (10) Executed action "AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)" in 46.9533ms
+14:10:2022 06:53 [Information] (10) Executed endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 06:53 [Information] (10) Request finished in 292.1371ms 200 application/json; charset=utf-8
+14:10:2022 06:53 [Information] (11) Request starting HTTP/2 GET https://localhost:49155/api/users  
+14:10:2022 06:53 [Information] (11) Request finished in 3.3893ms 404 
+14:10:2022 06:54 [Information] (2) Application is shutting down...
+14:10:2022 06:54 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 06:54 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 06:54 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 06:54 [Information] (1) Hosting environment: "Development"
+14:10:2022 06:54 [Information] (1) Content root path: "/app"
+14:10:2022 06:55 [Information] (8) Request starting HTTP/2 GET https://localhost:49155/api/token/users  
+14:10:2022 06:55 [Information] (8) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetUsers (AuthMicroservice)"'
+14:10:2022 06:55 [Information] (8) Route matched with "{action = \"GetUsers\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IList`1[CommonLibrary.BusinessLogic.Models.User]] GetUsers()" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+14:10:2022 06:55 [Information] (8) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+14:10:2022 06:55 [Information] (6) Request starting HTTP/2 GET https://localhost:49155/weatherforecast  
+14:10:2022 06:55 [Information] (6) Executing endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 06:55 [Information] (8) Executed DbCommand ("294"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[IsActive], [u].[Passcode], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]"
+14:10:2022 06:55 [Information] (6) Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[AuthMicroservice.WeatherForecast] Get()" on controller "AuthMicroservice.Controllers.WeatherForecastController" ("AuthMicroservice").
+14:10:2022 06:55 [Information] (6) Executing ObjectResult, writing value of type '"AuthMicroservice.WeatherForecast[]"'.
+14:10:2022 06:55 [Information] (6) Executed action "AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)" in 124.9603ms
+14:10:2022 06:55 [Information] (6) Executed endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 06:55 [Information] (6) Request finished in 178.58ms 200 application/json; charset=utf-8
+14:10:2022 06:55 [Information] (8) Executing ObjectResult, writing value of type '"System.Linq.Enumerable+SelectListIterator`2[[CommonLibrary.Repository.Models.User, CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[CommonLibrary.BusinessLogic.Models.User, CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+14:10:2022 06:55 [Information] (8) Executed action "AuthMicroservice.Controllers.TokenController.GetUsers (AuthMicroservice)" in 3308.4987ms
+14:10:2022 06:55 [Information] (8) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetUsers (AuthMicroservice)"'
+14:10:2022 06:55 [Information] (8) Request finished in 3399.7737ms 200 application/json; charset=utf-8
+14:10:2022 06:55 [Information] (2) Application is shutting down...
+14:10:2022 06:55 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 06:55 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 06:55 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 06:55 [Information] (1) Hosting environment: "Development"
+14:10:2022 06:55 [Information] (1) Content root path: "/app"
+14:10:2022 06:56 [Information] (4) Request starting HTTP/2 GET https://localhost:49155/weatherforecast  
+14:10:2022 06:56 [Information] (4) Executing endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 06:56 [Information] (4) Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[AuthMicroservice.WeatherForecast] Get()" on controller "AuthMicroservice.Controllers.WeatherForecastController" ("AuthMicroservice").
+14:10:2022 06:56 [Information] (4) Executing ObjectResult, writing value of type '"AuthMicroservice.WeatherForecast[]"'.
+14:10:2022 06:56 [Information] (4) Executed action "AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)" in 24.8628ms
+14:10:2022 06:56 [Information] (4) Executed endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 06:56 [Information] (4) Request finished in 158.9459ms 200 application/json; charset=utf-8
+14:10:2022 06:56 [Information] (11) Request starting HTTP/2 GET https://localhost:49155/api/token/users  
+14:10:2022 06:56 [Information] (11) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetUsers (AuthMicroservice)"'
+14:10:2022 06:56 [Information] (11) Route matched with "{action = \"GetUsers\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult GetUsers()" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+14:10:2022 06:56 [Information] (11) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+14:10:2022 06:56 [Information] (11) Executed DbCommand ("236"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[IsActive], [u].[Passcode], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]"
+14:10:2022 06:56 [Information] (11) Executing ObjectResult, writing value of type '"System.Linq.Enumerable+SelectListIterator`2[[CommonLibrary.Repository.Models.User, CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[CommonLibrary.BusinessLogic.Models.User, CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+14:10:2022 06:56 [Information] (11) Executed action "AuthMicroservice.Controllers.TokenController.GetUsers (AuthMicroservice)" in 2525.6702ms
+14:10:2022 06:56 [Information] (11) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetUsers (AuthMicroservice)"'
+14:10:2022 06:56 [Information] (11) Request finished in 2539.5369ms 200 application/json; charset=utf-8
+14:10:2022 07:12 [Information] (2) Application is shutting down...
+14:10:2022 07:12 [Fatal] (1) Application startup exception
+System.InvalidOperationException: Action 'AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+string username
+string password
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.InferParameterBindingInfoConvention.InferParameterBindingSources(ActionModel action)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.InferParameterBindingInfoConvention.Apply(ActionModel action)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ApplicationModelFactory.CreateApplicationModel(IEnumerable`1 controllerTypes)
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.Initialize()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider.GetChangeToken()
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointDataSourceBase.<>c__DisplayClass11_0.<Subscribe>b__0()
+   at Microsoft.Extensions.Primitives.ChangeToken.ChangeTokenRegistration`1..ctor(Func`1 changeTokenProducer, Action`1 changeTokenConsumer, TState state)
+   at Microsoft.Extensions.Primitives.ChangeToken.OnChange(Func`1 changeTokenProducer, Action changeTokenConsumer)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointDataSourceBase.Subscribe()
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerActionEndpointDataSource..ctor(IActionDescriptorCollectionProvider actions, ActionEndpointFactory endpointFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.AspNetCore.Builder.ControllerEndpointRouteBuilderExtensions.GetOrCreateDataSource(IEndpointRouteBuilder endpoints)
+   at Microsoft.AspNetCore.Builder.ControllerEndpointRouteBuilderExtensions.MapControllers(IEndpointRouteBuilder endpoints)
+   at AuthMicroservice.Startup.<>c.<Configure>b__5_0(IEndpointRouteBuilder endpoints) in C:\Users\praka\OneDrive\Documents\Work\Cognizant\Project Management Tracker\Backend\ProjectManagementTracker\AuthMicroservice\Startup.cs:line 48
+   at Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints(IApplicationBuilder builder, Action`1 configure)
+   at AuthMicroservice.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in C:\Users\praka\OneDrive\Documents\Work\Cognizant\Project Management Tracker\Backend\ProjectManagementTracker\AuthMicroservice\Startup.cs:line 46
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+14:10:2022 07:16 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 07:16 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 07:16 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 07:16 [Information] (1) Hosting environment: "Development"
+14:10:2022 07:16 [Information] (1) Content root path: "/app"
+14:10:2022 07:17 [Information] (8) Request starting HTTP/2 GET https://localhost:49155/weatherforecast  
+14:10:2022 07:17 [Information] (8) Executing endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 07:17 [Information] (8) Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[AuthMicroservice.WeatherForecast] Get()" on controller "AuthMicroservice.Controllers.WeatherForecastController" ("AuthMicroservice").
+14:10:2022 07:17 [Information] (8) Executing ObjectResult, writing value of type '"AuthMicroservice.WeatherForecast[]"'.
+14:10:2022 07:17 [Information] (8) Executed action "AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)" in 35.0625ms
+14:10:2022 07:17 [Information] (8) Executed endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 07:17 [Information] (8) Request finished in 196.9952ms 200 application/json; charset=utf-8
+14:10:2022 07:17 [Information] (8) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 56
+14:10:2022 07:17 [Information] (8) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+14:10:2022 07:17 [Information] (8) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(AuthMicroservice.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+14:10:2022 07:17 [Information] (8) Requested for token
+14:10:2022 07:17 [Information] (8) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+14:10:2022 07:17 [Information] (8) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 1226.1947ms
+14:10:2022 07:17 [Information] (8) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+14:10:2022 07:17 [Error] (8) An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The LINQ expression 'DbSet<User>
+    .Where(u => u.UserName.Equals(
+        value: __username_0, 
+        comparisonType: OrdinalIgnoreCase))' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to either AsEnumerable(), AsAsyncEnumerable(), ToList(), or ToListAsync(). See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|8_0(ShapedQueryExpression translated, <>c__DisplayClass8_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetEnumerator()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at CommonLibrary.BusinessLogic.Implementation.UserBusiness.GetToken(String username, String password) in C:\Users\praka\OneDrive\Documents\Work\Cognizant\Project Management Tracker\Backend\ProjectManagementTracker\CommonLibrary\BusinessLogic\Implementation\UserBusiness.cs:line 29
+   at AuthMicroservice.Controllers.TokenController.GetToken(LoginDetails loginDetails) in C:\Users\praka\OneDrive\Documents\Work\Cognizant\Project Management Tracker\Backend\ProjectManagementTracker\AuthMicroservice\Controllers\TokenController.cs:line 25
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+14:10:2022 07:17 [Information] (8) Request finished in 1313.1804ms 500 text/plain
+14:10:2022 07:26 [Information] (2) Application is shutting down...
+14:10:2022 07:36 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 07:36 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 07:36 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 07:36 [Information] (1) Hosting environment: "Development"
+14:10:2022 07:36 [Information] (1) Content root path: "/app"
+14:10:2022 07:37 [Information] (6) Request starting HTTP/2 GET https://localhost:49155/weatherforecast  
+14:10:2022 07:37 [Information] (6) Executing endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 07:37 [Information] (6) Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[AuthMicroservice.WeatherForecast] Get()" on controller "AuthMicroservice.Controllers.WeatherForecastController" ("AuthMicroservice").
+14:10:2022 07:37 [Information] (6) Executing ObjectResult, writing value of type '"AuthMicroservice.WeatherForecast[]"'.
+14:10:2022 07:37 [Information] (6) Executed action "AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)" in 38.36ms
+14:10:2022 07:37 [Information] (6) Executed endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 07:37 [Information] (6) Request finished in 237.8118ms 200 application/json; charset=utf-8
+14:10:2022 07:37 [Information] (11) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 56
+14:10:2022 07:37 [Information] (11) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+14:10:2022 07:37 [Information] (11) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(AuthMicroservice.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+14:10:2022 07:37 [Information] (11) Requested for token
+14:10:2022 07:37 [Information] (11) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+14:10:2022 07:37 [Information] (11) Executed DbCommand ("302"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[IsActive], [u].[Passcode], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE UPPER([u].[UserName]) = @__ToUpper_0"
+14:10:2022 07:37 [Information] (11) Executed DbCommand ("225"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+14:10:2022 07:37 [Information] (11) Executing ObjectResult, writing value of type '"System.String"'.
+14:10:2022 07:37 [Information] (11) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 4284.0223ms
+14:10:2022 07:37 [Information] (11) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+14:10:2022 07:37 [Information] (11) Request finished in 4318.7473ms 200 text/plain; charset=utf-8
+14:10:2022 07:38 [Information] (2) Application is shutting down...
+14:10:2022 07:38 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 07:38 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 07:38 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 07:38 [Information] (1) Hosting environment: "Development"
+14:10:2022 07:38 [Information] (1) Content root path: "/app"
+14:10:2022 07:38 [Information] (12) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 56
+14:10:2022 07:38 [Information] (12) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+14:10:2022 07:38 [Information] (12) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(AuthMicroservice.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+14:10:2022 07:38 [Information] (12) Requested for token
+14:10:2022 07:38 [Information] (12) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+14:10:2022 07:38 [Information] (12) Executed DbCommand ("279"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[IsActive], [u].[Passcode], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE UPPER([u].[UserName]) = @__ToUpper_0"
+14:10:2022 07:39 [Information] (12) Executed DbCommand ("228"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+14:10:2022 07:40 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 07:40 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 07:40 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 07:40 [Information] (1) Hosting environment: "Development"
+14:10:2022 07:40 [Information] (1) Content root path: "/app"
+14:10:2022 07:40 [Information] (12) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 56
+14:10:2022 07:40 [Information] (12) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+14:10:2022 07:40 [Information] (12) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(AuthMicroservice.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+14:10:2022 07:40 [Information] (12) Requested for token
+14:10:2022 07:40 [Information] (12) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+14:10:2022 07:40 [Information] (12) Executed DbCommand ("272"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[IsActive], [u].[Passcode], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE UPPER([u].[UserName]) = @__ToUpper_0"
+14:10:2022 07:40 [Information] (12) Executed DbCommand ("223"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+14:10:2022 07:40 [Information] (12) Executing ObjectResult, writing value of type '"System.String"'.
+14:10:2022 07:40 [Information] (12) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 4048.0329ms
+14:10:2022 07:40 [Information] (12) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+14:10:2022 07:40 [Information] (12) Request finished in 4157.3285ms 200 text/plain; charset=utf-8
+14:10:2022 07:40 [Information] (4) Request starting HTTP/2 GET https://localhost:49155/weatherforecast  
+14:10:2022 07:40 [Information] (4) Executing endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 07:40 [Information] (4) Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[AuthMicroservice.WeatherForecast] Get()" on controller "AuthMicroservice.Controllers.WeatherForecastController" ("AuthMicroservice").
+14:10:2022 07:40 [Information] (4) Executing ObjectResult, writing value of type '"AuthMicroservice.WeatherForecast[]"'.
+14:10:2022 07:40 [Information] (4) Executed action "AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)" in 47.4764ms
+14:10:2022 07:40 [Information] (4) Executed endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 07:40 [Information] (4) Request finished in 74.8869ms 200 application/json; charset=utf-8
+14:10:2022 08:09 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 08:09 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 08:09 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 08:09 [Information] (1) Hosting environment: "Development"
+14:10:2022 08:09 [Information] (1) Content root path: "/app"
+14:10:2022 08:09 [Information] (10) Request starting HTTP/2 GET https://localhost:49159/weatherforecast  
+14:10:2022 08:09 [Information] (10) Executing endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 08:09 [Information] (10) Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[AuthMicroservice.WeatherForecast] Get()" on controller "AuthMicroservice.Controllers.WeatherForecastController" ("AuthMicroservice").
+14:10:2022 08:09 [Information] (10) Executing ObjectResult, writing value of type '"AuthMicroservice.WeatherForecast[]"'.
+14:10:2022 08:09 [Information] (10) Executed action "AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)" in 39.4308ms
+14:10:2022 08:09 [Information] (10) Executed endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 08:09 [Information] (10) Request finished in 200.6436ms 200 application/json; charset=utf-8
+14:10:2022 08:09 [Information] (7) Request starting HTTP/2 GET https://localhost:49159/favicon.ico  
+14:10:2022 08:09 [Information] (7) Request finished in 3.9154ms 404 
+14:10:2022 08:10 [Information] (6) Request starting HTTP/1.1 POST https://localhost:49159/api/token application/json 56
+14:10:2022 08:10 [Information] (6) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+14:10:2022 08:10 [Information] (6) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+14:10:2022 08:10 [Information] (6) Requested for token
+14:10:2022 08:10 [Information] (6) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+14:10:2022 08:10 [Information] (6) Executed DbCommand ("294"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[IsActive], [u].[Passcode], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE UPPER([u].[UserName]) = @__ToUpper_0"
+14:10:2022 08:10 [Information] (6) Executed DbCommand ("225"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+14:10:2022 08:10 [Information] (6) Executing ObjectResult, writing value of type '"System.String"'.
+14:10:2022 08:10 [Information] (6) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 4505.6407ms
+14:10:2022 08:10 [Information] (6) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+14:10:2022 08:10 [Information] (6) Request finished in 4524.4332ms 200 text/plain; charset=utf-8
+14:10:2022 08:11 [Information] (2) Application is shutting down...
+14:10:2022 08:11 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 08:11 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 08:11 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 08:11 [Information] (1) Hosting environment: "Development"
+14:10:2022 08:11 [Information] (1) Content root path: "/app"
+14:10:2022 08:12 [Information] (6) Request starting HTTP/2 GET https://localhost:49159/weatherforecast  
+14:10:2022 08:12 [Information] (6) Executing endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 08:12 [Information] (6) Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[AuthMicroservice.WeatherForecast] Get()" on controller "AuthMicroservice.Controllers.WeatherForecastController" ("AuthMicroservice").
+14:10:2022 08:12 [Information] (6) Executing ObjectResult, writing value of type '"AuthMicroservice.WeatherForecast[]"'.
+14:10:2022 08:12 [Information] (6) Executed action "AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)" in 28.8982ms
+14:10:2022 08:12 [Information] (6) Executed endpoint '"AuthMicroservice.Controllers.WeatherForecastController.Get (AuthMicroservice)"'
+14:10:2022 08:12 [Information] (6) Request finished in 162.5436ms 200 application/json; charset=utf-8
+14:10:2022 08:12 [Information] (13) Request starting HTTP/1.1 POST https://localhost:49159/admin/users application/json 58
+14:10:2022 08:12 [Information] (13) Request finished in 4.9458ms 404 
+14:10:2022 08:13 [Information] (13) Request starting HTTP/1.1 POST https://localhost:49159/admin/users application/json 58
+14:10:2022 08:13 [Information] (13) Request finished in 1.646ms 404 
+14:10:2022 09:15 [Information] (73) Request starting HTTP/1.1 POST https://localhost:49159/api/token application/json 63
+14:10:2022 09:15 [Information] (73) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+14:10:2022 09:15 [Information] (73) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+14:10:2022 09:15 [Information] (73) Requested for token
+14:10:2022 09:15 [Information] (73) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+14:10:2022 09:15 [Information] (73) Executed DbCommand ("267"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[IsActive], [u].[Passcode], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE UPPER([u].[UserName]) = @__ToUpper_0"
+14:10:2022 09:15 [Information] (73) Executed DbCommand ("221"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+14:10:2022 09:15 [Information] (73) Executing ObjectResult, writing value of type '"System.String"'.
+14:10:2022 09:15 [Information] (73) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 3789.6025ms
+14:10:2022 09:15 [Information] (73) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+14:10:2022 09:15 [Information] (73) Request finished in 3889.6888ms 200 text/plain; charset=utf-8
