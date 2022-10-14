@@ -48,7 +48,7 @@ namespace CommonLibrary.BusinessLogic.Implementation
                 string username = loginDetails.UserName;
                 string password = loginDetails.Password;
 
-                var user = _unitOfWork.Users.Find(u => u.UserName.ToUpper().Equals(username.ToUpper())).FirstOrDefault();
+                var user = _unitOfWork.Users.Find(u => u.UserName.ToUpper().Equals(username.ToUpper()) && u.IsActive).FirstOrDefault();
                 string token = string.Empty;
                 if (user != null && BCrypt.Net.BCrypt.Verify(password, user.Password))
                 {
@@ -63,7 +63,7 @@ namespace CommonLibrary.BusinessLogic.Implementation
             }
         }
 
-        public bool CreateUser(Registration userRegistration, bool isAdmin=true)
+        public bool CreateUser(Registration userRegistration)
         {
             try
             {
@@ -72,7 +72,7 @@ namespace CommonLibrary.BusinessLogic.Implementation
                 {
                     User user = new User();
 
-                    if (isAdmin)
+                    if (userRegistration.RoleId == (int)Roles.Admin)
                     {
                         user = new User
                         {
@@ -82,7 +82,7 @@ namespace CommonLibrary.BusinessLogic.Implementation
                             Name = userRegistration.Name
                         };
                     }
-                    else {
+                    else if(userRegistration.RoleId == (int)Roles.Member) {
                         user = new User
                         {
                             IsActive = false,
@@ -94,7 +94,8 @@ namespace CommonLibrary.BusinessLogic.Implementation
                             EndDate = userRegistration.EndDate,
                             Description = userRegistration.Description,
                             Skills = userRegistration.Skills,
-                            AllowcationPercentage = userRegistration.AllowcationPercentage
+                            AllowcationPercentage = userRegistration.AllowcationPercentage,
+                            YearsOfExperience = userRegistration.YearsOfExperience
                         };
                     }
                     
@@ -111,7 +112,7 @@ namespace CommonLibrary.BusinessLogic.Implementation
             }
         }
 
-        public int UserStatusWithUpdate(Registration userRegistration, bool isUpdate = true)
+        public int MemeberStatusWithUpdate(Registration userRegistration, bool isUpdate = true)
         {
             int status = (int)Status.Success;
             try
@@ -132,11 +133,17 @@ namespace CommonLibrary.BusinessLogic.Implementation
                     return status;
                 }
                 else if (isUpdate) {
-                    user.IsActive = true;
-                    user.Name = userRegistration.Name;
-                    user.Password = BCrypt.Net.BCrypt.HashPassword(userRegistration.Password);
-                    _unitOfWork.Users.Update(user);
-                    _unitOfWork.Complete();
+                    if (BCrypt.Net.BCrypt.Verify(userRegistration.Passcode, user.Passcode))
+                    {
+                        user.IsActive = true;
+                        user.Name = userRegistration.Name;
+                        user.Password = BCrypt.Net.BCrypt.HashPassword(userRegistration.Password);
+                        _unitOfWork.Users.Update(user);
+                        _unitOfWork.Complete();
+                    }
+                    else {
+                        throw new Exception("Doesn't match with passcode");
+                    }
                 }
             }
             catch (Exception ex)

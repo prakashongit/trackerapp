@@ -13,8 +13,9 @@ namespace CommonLibrary.Repository.Configurations
         {
             builder.Property(c => c.UserName).IsRequired();
             builder.HasMany(c => c.Users).WithOne().OnDelete(DeleteBehavior.Restrict);
-            builder.HasMany(c => c.Project).WithOne();
+            builder.HasOne(c => c.Project).WithMany();
             builder.Property(c => c.AllowcationPercentage).HasMaxLength(100).HasDefaultValue(0);
+            builder.Property(c => c.YearsOfExperience).HasDefaultValue(0);
             builder.Property(c => c.StartDate).HasDefaultValue(DateTime.Now);
             builder.Property(c => c.EndDate).HasDefaultValue(DateTime.Now);
             builder.Property(c => c.IsActive).HasDefaultValue(true);

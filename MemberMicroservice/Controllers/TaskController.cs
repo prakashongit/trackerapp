@@ -1,22 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MemberMicroservice.Models;
-using Microsoft.AspNetCore.Http;
+using CommonLibrary.BusinessLogic.Interface;
+using CommonLibrary.BusinessLogic.Models;
+using CommonLibrary.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace MemberMicroservice.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize(Roles = "Member")]
     [ApiController]
     public class TaskController : ControllerBase
     {
-        public TaskController() { }
+        private readonly ILogger<TaskController> _logger;
+        private readonly ITaskBusiness _taskBusiness;
+
+        public TaskController(ITaskBusiness taskBusiness, ILogger<TaskController> logger)
+        {
+            _taskBusiness = taskBusiness;
+            _logger = logger;
+        }
 
         [HttpGet]
-        public ActionResult<IList<TaskDetails>> GetTasks() {
-            return new List<TaskDetails> { new TaskDetails() { Name = "Task1" }, new TaskDetails() { Name = "Task2" } };
+        public ActionResult<IList<TaskDetails>> GetTasks([FromQuery]int userid) {
+            try
+            {
+                return Ok(_taskBusiness.GetTasks(userid));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogErrorDetails(ex);
+                throw ex;
+            }
         }
     }
 }

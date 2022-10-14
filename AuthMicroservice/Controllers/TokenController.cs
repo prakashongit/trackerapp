@@ -32,9 +32,9 @@ namespace AuthMicroservice.Controllers
             }
         }
 
-        [HttpGet]
-        public ActionResult GetUsers() {
-            return Ok(_userBusiness.GetUsers());
-        }
+        //[HttpGet]
+        //public ActionResult GetUsers() {
+        //    return Ok(_userBusiness.GetUsers());
+        //}
     }
 }

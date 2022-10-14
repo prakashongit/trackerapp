@@ -6,11 +6,11 @@ namespace CommonLibrary.BusinessLogic.Models
 {
     public class Registration
     {
-        public virtual string Name { get; set; }
-        public virtual string UserName { get; set; }
-        public virtual int RoleId { get; set; }
-        public virtual string Passcode { get; set; }
-        public virtual string Password { get; set; }
+        public string Name { get; set; }
+        public string UserName { get; set; }
+        public int RoleId { get; set; }
+        public string Passcode { get; set; }
+        public string Password { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int AllowcationPercentage { get; set; }

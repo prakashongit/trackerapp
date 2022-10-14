@@ -10,12 +10,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20221014053054_MyFirstMigration.cs" />
+    <Compile Remove="Migrations\20221014053054_MyFirstMigration.Designer.cs" />
     <Compile Remove="Migrations\20221014095219_AddedTaskAndProject.cs" />
     <Compile Remove="Migrations\20221014095219_AddedTaskAndProject.Designer.cs" />
     <Compile Remove="Migrations\20221014095531_AddedTaskAndProject.cs" />
     <Compile Remove="Migrations\20221014095531_AddedTaskAndProject.Designer.cs" />
     <Compile Remove="Migrations\20221014100419_AddedTaskAndProject.cs" />
     <Compile Remove="Migrations\20221014100419_AddedTaskAndProject.Designer.cs" />
+    <Compile Remove="Migrations\20221014100729_AddedTaskAndProject.cs" />
+    <Compile Remove="Migrations\20221014100729_AddedTaskAndProject.Designer.cs" />
+    <Compile Remove="Migrations\20221014101209_AddedDefaultvalues.cs" />
+    <Compile Remove="Migrations\20221014101209_AddedDefaultvalues.Designer.cs" />
+    <Compile Remove="Migrations\20221014184822_UpdatedAttributes.cs" />
+    <Compile Remove="Migrations\20221014184822_UpdatedAttributes.Designer.cs" />
+    <Compile Remove="Migrations\20221014193914_addedIdentityKeys.cs" />
+    <Compile Remove="Migrations\20221014193914_addedIdentityKeys.Designer.cs" />
+    <Compile Remove="Migrations\20221014194115_MyFirstMigration.cs" />
+    <Compile Remove="Migrations\20221014194115_MyFirstMigration.Designer.cs" />
+    <Compile Remove="Migrations\20221014194248_MyFirstMigration.cs" />
+    <Compile Remove="Migrations\20221014194248_MyFirstMigration.Designer.cs" />
+    <Compile Remove="Migrations\20221014194508_MyFirstMigration.cs" />
+    <Compile Remove="Migrations\20221014194508_MyFirstMigration.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

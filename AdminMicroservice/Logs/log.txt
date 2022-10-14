@@ -364,3 +364,136 @@ WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();"
 14:10:2022 09:15 [Information] (75) Authorization failed.
 14:10:2022 09:15 [Information] (75) AuthenticationScheme: "Bearer" was forbidden.
 14:10:2022 09:15 [Information] (75) Request finished in 34.5735ms 403 
+14:10:2022 18:03 [Warning] (1) Storing keys in a directory '"/root/.aspnet/DataProtection-Keys"' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+14:10:2022 18:03 [Information] (1) User profile is available. Using '"/root/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+14:10:2022 18:03 [Information] (1) Creating key {09710327-f511-475c-a50e-5e6886950dca} with creation date 2022-10-14 18:03:41Z, activation date 2022-10-14 18:03:41Z, and expiration date 2023-01-12 18:03:41Z.
+14:10:2022 18:03 [Warning] (1) No XML encryptor configured. Key {09710327-f511-475c-a50e-5e6886950dca} may be persisted to storage in unencrypted form.
+14:10:2022 18:03 [Information] (1) Writing data to file '"/root/.aspnet/DataProtection-Keys/key-09710327-f511-475c-a50e-5e6886950dca.xml"'.
+14:10:2022 18:03 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 18:03 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 18:03 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 18:03 [Information] (1) Hosting environment: "Development"
+14:10:2022 18:03 [Information] (1) Content root path: "/app"
+14:10:2022 18:04 [Information] (8) Request starting HTTP/2 GET https://localhost:49157/weatherforecast  
+14:10:2022 18:04 [Information] (8) Executing endpoint '"AdminMicroservice.Controllers.WeatherForecastController.Get (AdminMicroservice)"'
+14:10:2022 18:04 [Information] (8) Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[AdminMicroservice.WeatherForecast] Get()" on controller "AdminMicroservice.Controllers.WeatherForecastController" ("AdminMicroservice").
+14:10:2022 18:04 [Information] (8) Executing ObjectResult, writing value of type '"AdminMicroservice.WeatherForecast[]"'.
+14:10:2022 18:04 [Information] (8) Executed action "AdminMicroservice.Controllers.WeatherForecastController.Get (AdminMicroservice)" in 22.38ms
+14:10:2022 18:04 [Information] (8) Executed endpoint '"AdminMicroservice.Controllers.WeatherForecastController.Get (AdminMicroservice)"'
+14:10:2022 18:04 [Information] (8) Request finished in 196.1025ms 200 application/json; charset=utf-8
+14:10:2022 18:04 [Information] (11) Request starting HTTP/2 GET https://localhost:49157/favicon.ico  
+14:10:2022 18:04 [Information] (11) Request finished in 4.7348ms 404 
+14:10:2022 18:36 [Information] (45) Request starting HTTP/1.1 GET https://localhost:49157/weatherforecast  0
+14:10:2022 18:36 [Information] (45) Executing endpoint '"AdminMicroservice.Controllers.WeatherForecastController.Get (AdminMicroservice)"'
+14:10:2022 18:36 [Information] (45) Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[AdminMicroservice.WeatherForecast] Get()" on controller "AdminMicroservice.Controllers.WeatherForecastController" ("AdminMicroservice").
+14:10:2022 18:36 [Information] (45) Executing ObjectResult, writing value of type '"AdminMicroservice.WeatherForecast[]"'.
+14:10:2022 18:36 [Information] (45) Executed action "AdminMicroservice.Controllers.WeatherForecastController.Get (AdminMicroservice)" in 15.7845ms
+14:10:2022 18:36 [Information] (45) Executed endpoint '"AdminMicroservice.Controllers.WeatherForecastController.Get (AdminMicroservice)"'
+14:10:2022 18:36 [Information] (45) Request finished in 52.2105ms 200 application/json; charset=utf-8
+14:10:2022 18:48 [Information] (2) Application is shutting down...
+14:10:2022 19:56 [Warning] (1) Storing keys in a directory '"/root/.aspnet/DataProtection-Keys"' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+14:10:2022 19:56 [Information] (1) User profile is available. Using '"/root/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+14:10:2022 19:56 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 19:56 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 19:56 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 19:56 [Information] (1) Hosting environment: "Development"
+14:10:2022 19:56 [Information] (1) Content root path: "/app"
+14:10:2022 19:56 [Information] (4) Request starting HTTP/1.1 POST https://localhost:49157/admin/users application/json 251
+14:10:2022 19:56 [Information] (4) Successfully validated the token.
+14:10:2022 19:56 [Information] (4) Authorization failed.
+14:10:2022 19:56 [Information] (4) AuthenticationScheme: "Bearer" was forbidden.
+14:10:2022 19:56 [Information] (4) Request finished in 552.6367ms 403 
+14:10:2022 19:57 [Information] (7) Request starting HTTP/1.1 POST https://localhost:49157/admin/users application/json 251
+14:10:2022 19:57 [Information] (7) Successfully validated the token.
+14:10:2022 19:57 [Information] (7) Authorization was successful.
+14:10:2022 19:57 [Information] (7) Executing endpoint '"AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)"'
+14:10:2022 19:57 [Information] (7) Route matched with "{action = \"PostUser\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean] PostUser(CommonLibrary.BusinessLogic.Models.Registration)" on controller "AdminMicroservice.Controllers.UsersController" ("AdminMicroservice").
+14:10:2022 19:57 [Information] (7) Executing ObjectResult, writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+14:10:2022 19:57 [Information] (7) Executed action "AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)" in 574.0414ms
+14:10:2022 19:57 [Information] (7) Executed endpoint '"AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)"'
+14:10:2022 19:57 [Information] (7) Request finished in 767.9483ms 400 application/problem+json; charset=utf-8
+14:10:2022 19:58 [Information] (6) Request starting HTTP/1.1 POST https://localhost:49157/admin/users application/json 241
+14:10:2022 19:58 [Information] (6) Successfully validated the token.
+14:10:2022 19:58 [Information] (6) Authorization was successful.
+14:10:2022 19:58 [Information] (6) Executing endpoint '"AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)"'
+14:10:2022 19:58 [Information] (6) Route matched with "{action = \"PostUser\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean] PostUser(CommonLibrary.BusinessLogic.Models.Registration)" on controller "AdminMicroservice.Controllers.UsersController" ("AdminMicroservice").
+14:10:2022 19:58 [Information] (6) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+14:10:2022 19:58 [Information] (6) Executed DbCommand ("317"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE UPPER([u].[UserName]) = @__ToUpper_0"
+14:10:2022 19:58 [Information] (6) Executed DbCommand ("224"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (Size = 4000), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Users] ([AllowcationPercentage], [Description], [EndDate], [IsActive], [ManagerId], [Name], [Passcode], [Password], [ProjectId], [RoleId], [Skills], [StartDate], [UserName], [YearsOfExperience])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();"
+14:10:2022 19:58 [Information] (6) Executing ObjectResult, writing value of type '"System.Boolean"'.
+14:10:2022 19:58 [Information] (6) Executed action "AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)" in 3957.6919ms
+14:10:2022 19:58 [Information] (6) Executed endpoint '"AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)"'
+14:10:2022 19:58 [Information] (6) Request finished in 4008.3215ms 201 application/json; charset=utf-8
+14:10:2022 20:00 [Information] (20) Request starting HTTP/1.1 POST https://localhost:49157/admin/users application/json 266
+14:10:2022 20:00 [Information] (20) Successfully validated the token.
+14:10:2022 20:00 [Information] (20) Authorization was successful.
+14:10:2022 20:00 [Information] (20) Executing endpoint '"AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)"'
+14:10:2022 20:00 [Information] (20) Route matched with "{action = \"PostUser\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean] PostUser(CommonLibrary.BusinessLogic.Models.Registration)" on controller "AdminMicroservice.Controllers.UsersController" ("AdminMicroservice").
+14:10:2022 20:00 [Information] (20) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+14:10:2022 20:00 [Information] (20) Executed DbCommand ("239"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE UPPER([u].[UserName]) = @__ToUpper_0"
+14:10:2022 20:00 [Information] (20) Executing ObjectResult, writing value of type '"System.Boolean"'.
+14:10:2022 20:00 [Information] (20) Executed action "AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)" in 288.014ms
+14:10:2022 20:00 [Information] (20) Executed endpoint '"AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)"'
+14:10:2022 20:00 [Information] (20) Request finished in 302.3409ms 201 application/json; charset=utf-8
+14:10:2022 20:22 [Information] (2) Application is shutting down...
+14:10:2022 20:22 [Warning] (1) Storing keys in a directory '"/root/.aspnet/DataProtection-Keys"' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+14:10:2022 20:22 [Information] (1) User profile is available. Using '"/root/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+14:10:2022 20:22 [Information] (1) Now listening on: "https://[::]:443"
+14:10:2022 20:22 [Information] (1) Now listening on: "http://[::]:80"
+14:10:2022 20:22 [Information] (1) Application started. Press Ctrl+C to shut down.
+14:10:2022 20:22 [Information] (1) Hosting environment: "Development"
+14:10:2022 20:22 [Information] (1) Content root path: "/app"
+14:10:2022 20:24 [Information] (10) Request starting HTTP/1.1 POST https://localhost:49157/admin/users application/json 267
+14:10:2022 20:24 [Information] (10) Successfully validated the token.
+14:10:2022 20:24 [Information] (10) Authorization was successful.
+14:10:2022 20:24 [Information] (10) Executing endpoint '"AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)"'
+14:10:2022 20:24 [Information] (10) Route matched with "{action = \"PostUser\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean] PostUser(CommonLibrary.BusinessLogic.Models.Registration)" on controller "AdminMicroservice.Controllers.UsersController" ("AdminMicroservice").
+14:10:2022 20:24 [Information] (10) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+14:10:2022 20:24 [Information] (10) Executed DbCommand ("277"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE UPPER([u].[UserName]) = @__ToUpper_0"
+14:10:2022 20:24 [Information] (10) Executed DbCommand ("221"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (Size = 4000), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Users] ([AllowcationPercentage], [Description], [EndDate], [IsActive], [ManagerId], [Name], [Passcode], [Password], [ProjectId], [RoleId], [Skills], [StartDate], [UserName], [YearsOfExperience])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();"
+14:10:2022 20:24 [Information] (10) Executing ObjectResult, writing value of type '"System.Boolean"'.
+14:10:2022 20:24 [Information] (10) Executed action "AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)" in 4063.5245ms
+14:10:2022 20:24 [Information] (10) Executed endpoint '"AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)"'
+14:10:2022 20:24 [Information] (10) Request finished in 4537.861ms 201 application/json; charset=utf-8
+14:10:2022 20:26 [Information] (15) Request starting HTTP/1.1 POST https://localhost:49157/admin/users application/json 267
+14:10:2022 20:26 [Information] (15) Successfully validated the token.
+14:10:2022 20:26 [Information] (15) Authorization was successful.
+14:10:2022 20:26 [Information] (15) Executing endpoint '"AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)"'
+14:10:2022 20:26 [Information] (15) Route matched with "{action = \"PostUser\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean] PostUser(CommonLibrary.BusinessLogic.Models.Registration)" on controller "AdminMicroservice.Controllers.UsersController" ("AdminMicroservice").
+14:10:2022 20:26 [Information] (15) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+14:10:2022 20:26 [Information] (15) Executed DbCommand ("222"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE UPPER([u].[UserName]) = @__ToUpper_0"
+14:10:2022 20:26 [Information] (15) Executed DbCommand ("218"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (Size = 4000), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Users] ([AllowcationPercentage], [Description], [EndDate], [IsActive], [ManagerId], [Name], [Passcode], [Password], [ProjectId], [RoleId], [Skills], [StartDate], [UserName], [YearsOfExperience])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();"
+14:10:2022 20:26 [Information] (15) Executing ObjectResult, writing value of type '"System.Boolean"'.
+14:10:2022 20:26 [Information] (15) Executed action "AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)" in 1178.3754ms
+14:10:2022 20:26 [Information] (15) Executed endpoint '"AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)"'
+14:10:2022 20:26 [Information] (15) Request finished in 1230.0067ms 201 application/json; charset=utf-8

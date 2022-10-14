@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CommonLibrary.Migrations
 {
     [DbContext(typeof(ProjectManagementTrackerDBContext))]
-    [Migration("20221014101209_AddedDefaultvalues")]
-    partial class AddedDefaultvalues
+    [Migration("20221014195133_UpdatedYearsOfExperience")]
+    partial class UpdatedYearsOfExperience
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,9 @@ namespace CommonLibrary.Migrations
             modelBuilder.Entity("CommonLibrary.Repository.Models.Project", b =>
                 {
                     b.Property<int>("ProjectId")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -121,7 +123,7 @@ namespace CommonLibrary.Migrations
                     b.Property<DateTime>("EndDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 10, 14, 15, 42, 8, 397, DateTimeKind.Local).AddTicks(1617));
+                        .HasDefaultValue(new DateTime(2022, 10, 15, 1, 21, 33, 237, DateTimeKind.Local).AddTicks(7384));
 
                     b.Property<bool>("IsActive")
                         .ValueGeneratedOnAdd()
@@ -140,7 +142,7 @@ namespace CommonLibrary.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProjectId")
+                    b.Property<int?>("ProjectId")
                         .HasColumnType("int");
 
                     b.Property<int>("RoleId")
@@ -152,28 +154,26 @@ namespace CommonLibrary.Migrations
                     b.Property<DateTime>("StartDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 10, 14, 15, 42, 8, 395, DateTimeKind.Local).AddTicks(1358));
+                        .HasDefaultValue(new DateTime(2022, 10, 15, 1, 21, 33, 236, DateTimeKind.Local).AddTicks(3916));
 
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("YearsOfExperience")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
                     b.HasKey("UserId");
 
                     b.HasIndex("ManagerId");
 
+                    b.HasIndex("ProjectId");
+
                     b.HasIndex("RoleId");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("CommonLibrary.Repository.Models.Project", b =>
-                {
-                    b.HasOne("CommonLibrary.Repository.Models.User", null)
-                        .WithMany("Project")
-                        .HasForeignKey("ProjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("CommonLibrary.Repository.Models.Task", b =>
@@ -191,6 +191,10 @@ namespace CommonLibrary.Migrations
                         .WithMany("Users")
                         .HasForeignKey("ManagerId")
                         .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("CommonLibrary.Repository.Models.Project", "Project")
+                        .WithMany()
+                        .HasForeignKey("ProjectId");
 
                     b.HasOne("CommonLibrary.Repository.Models.Role", "Role")
                         .WithMany()

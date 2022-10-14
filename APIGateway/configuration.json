@@ -1,33 +1,40 @@
 {
-  "Routes": [
+  "ReRoutes": [
     {
       "DownstreamPathTemplate": "/api/token",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44334
+          "Port": 49159
         }
       ],
-      "UpstreamPathTemplate": "/gateway/token",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamPathTemplate": "/projectmgmt/api/v1/auth/token",
+      "UpstreamHttpMethod": [ "POST" ]
     },
     {
-      "DownstreamPathTemplate": "/weatherforecast",
+      "DownstreamPathTemplate": "/api/Registration/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44334
+          "Port": 49161
         }
       ],
-      "UpstreamPathTemplate": "/gateway/weatherforecast",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamPathTemplate": "/projectmgmt/api/v1/Registration/{everything}",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/admin/users",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 49157
+        }
+      ],
+      "UpstreamPathTemplate": "/projectmgmt/api/v1/manager/add-member",
+      "UpstreamHttpMethod": [ "POST" ]
     }
-  ],
-
-  "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:44321"
-  }
-
+  ]
 }

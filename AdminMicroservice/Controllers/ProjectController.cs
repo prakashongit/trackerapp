@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 
 namespace AdminMicroservice.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("admin/[controller]")]
     [Authorize(Roles = "Admin")]
     [ApiController]
     public class ProjectController : ControllerBase

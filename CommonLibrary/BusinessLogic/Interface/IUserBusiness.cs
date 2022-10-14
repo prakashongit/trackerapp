@@ -9,6 +9,7 @@ namespace CommonLibrary.BusinessLogic.Interface
     {
         IEnumerable<UserDetails> GetMyUsers(int managerId);
         string GetToken(LoginDetails loginDetails);
-        bool CreateUser(Registration user, bool isAdmin = true);
+        bool CreateUser(Registration user);
+        int MemeberStatusWithUpdate(Registration userRegistration, bool isUpdate = true);
     }
 }

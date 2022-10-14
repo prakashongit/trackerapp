@@ -24,7 +24,7 @@ namespace CommonLibrary.Repository.Models
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int AllowcationPercentage { get; set; }
-        public int ProjectId { get; set; }
+        public int? ProjectId { get; set; }
 
         [ForeignKey("RoleId")]
         public Role Role { get; set; }
@@ -33,6 +33,6 @@ namespace CommonLibrary.Repository.Models
         public List<User> Users { get; set; }
 
         [ForeignKey("ProjectId")]
-        public IList<Project> Project { get; set; }
+        public Project Project { get; set; }
     }
 }
