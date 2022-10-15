@@ -40,19 +40,5 @@ namespace AdminMicroservice.Controllers
                 throw ex;
             }
         }
-
-        [HttpGet]
-        public ActionResult<bool> GetTasks(int userid)
-        {
-            try
-            {
-                return Ok(_taskBusiness.GetTasks(userid));
-            }
-            catch (Exception ex)
-            {
-                _logger.LogErrorDetails(ex);
-                throw ex;
-            }
-        }
     }
 }

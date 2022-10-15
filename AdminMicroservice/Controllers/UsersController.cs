@@ -16,10 +16,12 @@ namespace AdminMicroservice.Controllers
     {
         private readonly ILogger<UsersController> _logger;
         private readonly IUserBusiness _userBusiness;
+        private readonly IProjectBusiness _projectBusiness;
 
-        public UsersController(IUserBusiness userBusiness, ILogger<UsersController> logger) {
+        public UsersController(IUserBusiness userBusiness, ILogger<UsersController> logger, IProjectBusiness projectBusiness) {
             _userBusiness = userBusiness;
             _logger = logger;
+            _projectBusiness = projectBusiness;
         }
 
         [HttpPost]
@@ -42,6 +44,20 @@ namespace AdminMicroservice.Controllers
             try
             {
                 return Ok(_userBusiness.GetMyUsers(userid));
+            }
+            catch (System.Exception ex)
+            {
+                _logger.LogErrorDetails(ex);
+                throw ex;
+            }
+        }
+
+        [HttpPut]
+        public ActionResult<bool> UpdateAllocationPercentage([FromQuery] UpdatePercentage details)
+        {
+            try
+            {
+                return Created(nameof(UpdateAllocationPercentage), _projectBusiness.UpdateAllowcationPercentage(details));
             }
             catch (System.Exception ex)
             {

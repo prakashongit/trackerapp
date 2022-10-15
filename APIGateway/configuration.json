@@ -1,31 +1,47 @@
 {
   "ReRoutes": [
+    //Auth Service
     {
       "DownstreamPathTemplate": "/api/token",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 49159
+          "Port": 49153
         }
       ],
       "UpstreamPathTemplate": "/projectmgmt/api/v1/auth/token",
       "UpstreamHttpMethod": [ "POST" ]
     },
+    //Manager Service
     {
-      "DownstreamPathTemplate": "/api/Registration/{everything}",
+      "DownstreamPathTemplate": "/admin/users",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 49161
+          "Port": 49155
         }
       ],
-      "UpstreamPathTemplate": "/projectmgmt/api/v1/Registration/{everything}",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamPathTemplate": "/projectmgmt/api/v1/manager/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/admin/users",
+      "DownstreamPathTemplate": "/admin/task",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 49155
+        }
+      ],
+      "UpstreamPathTemplate": "/projectmgmt/api/v1/manager/assign-task",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Member Services
+    {
+      "DownstreamPathTemplate": "/api/Registration/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -33,8 +49,20 @@
           "Port": 49157
         }
       ],
-      "UpstreamPathTemplate": "/projectmgmt/api/v1/manager/add-member",
+      "UpstreamPathTemplate": "/projectmgmt/api/v1/Registration/{everything}",
       "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/member/task",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 49157
+        }
+      ],
+      "UpstreamPathTemplate": "/projectmgmt/api/v1/member/tasks",
+      "UpstreamHttpMethod": [ "Get" ]
     }
   ]
 }

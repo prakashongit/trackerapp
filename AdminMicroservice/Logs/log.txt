@@ -497,3 +497,162 @@ WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity();"
 14:10:2022 20:26 [Information] (15) Executed action "AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)" in 1178.3754ms
 14:10:2022 20:26 [Information] (15) Executed endpoint '"AdminMicroservice.Controllers.UsersController.PostUser (AdminMicroservice)"'
 14:10:2022 20:26 [Information] (15) Request finished in 1230.0067ms 201 application/json; charset=utf-8
+15:10:2022 08:53 [Warning] (1) Storing keys in a directory '"/root/.aspnet/DataProtection-Keys"' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+15:10:2022 08:53 [Information] (1) User profile is available. Using '"/root/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+15:10:2022 08:53 [Information] (1) Creating key {ed9f3765-b04c-488e-85b8-64a9b2a671e5} with creation date 2022-10-15 08:53:57Z, activation date 2022-10-15 08:53:57Z, and expiration date 2023-01-13 08:53:57Z.
+15:10:2022 08:53 [Warning] (1) No XML encryptor configured. Key {ed9f3765-b04c-488e-85b8-64a9b2a671e5} may be persisted to storage in unencrypted form.
+15:10:2022 08:53 [Information] (1) Writing data to file '"/root/.aspnet/DataProtection-Keys/key-ed9f3765-b04c-488e-85b8-64a9b2a671e5.xml"'.
+15:10:2022 08:53 [Information] (1) Now listening on: "https://[::]:443"
+15:10:2022 08:53 [Information] (1) Now listening on: "http://[::]:80"
+15:10:2022 08:53 [Information] (1) Application started. Press Ctrl+C to shut down.
+15:10:2022 08:53 [Information] (1) Hosting environment: "Development"
+15:10:2022 08:53 [Information] (1) Content root path: "/app"
+15:10:2022 09:29 [Information] (50) Request starting HTTP/1.1 POST https://localhost:49155/admin/task application/json 151
+15:10:2022 09:29 [Information] (50) Successfully validated the token.
+15:10:2022 09:29 [Information] (50) Authorization was successful.
+15:10:2022 09:29 [Information] (50) Executing endpoint '"AdminMicroservice.Controllers.TaskController.PostTask (AdminMicroservice)"'
+15:10:2022 09:29 [Information] (50) Route matched with "{action = \"PostTask\", controller = \"Task\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean] PostTask(CommonLibrary.BusinessLogic.Models.SaveTask)" on controller "AdminMicroservice.Controllers.TaskController" ("AdminMicroservice").
+15:10:2022 09:29 [Information] (50) Executed action "AdminMicroservice.Controllers.TaskController.PostTask (AdminMicroservice)" in 3.1371ms
+15:10:2022 09:29 [Information] (50) Executed endpoint '"AdminMicroservice.Controllers.TaskController.PostTask (AdminMicroservice)"'
+15:10:2022 09:29 [Error] (50) An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'CommonLibrary.BusinessLogic.Interface.ITaskBusiness' while attempting to activate 'AdminMicroservice.Controllers.TaskController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+15:10:2022 09:29 [Information] (50) Request finished in 556.1314ms 500 text/plain
+15:10:2022 09:31 [Information] (2) Application is shutting down...
+15:10:2022 09:31 [Warning] (1) Storing keys in a directory '"/root/.aspnet/DataProtection-Keys"' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+15:10:2022 09:31 [Information] (1) User profile is available. Using '"/root/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+15:10:2022 09:31 [Information] (1) Now listening on: "https://[::]:443"
+15:10:2022 09:31 [Information] (1) Now listening on: "http://[::]:80"
+15:10:2022 09:31 [Information] (1) Application started. Press Ctrl+C to shut down.
+15:10:2022 09:31 [Information] (1) Hosting environment: "Development"
+15:10:2022 09:31 [Information] (1) Content root path: "/app"
+15:10:2022 09:33 [Information] (12) Request starting HTTP/1.1 POST https://localhost:49155/admin/task application/json 151
+15:10:2022 09:33 [Information] (12) Successfully validated the token.
+15:10:2022 09:33 [Information] (12) Authorization was successful.
+15:10:2022 09:33 [Information] (12) Executing endpoint '"AdminMicroservice.Controllers.TaskController.PostTask (AdminMicroservice)"'
+15:10:2022 09:33 [Information] (12) Route matched with "{action = \"PostTask\", controller = \"Task\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean] PostTask(CommonLibrary.BusinessLogic.Models.SaveTask)" on controller "AdminMicroservice.Controllers.TaskController" ("AdminMicroservice").
+15:10:2022 09:33 [Information] (12) Adding task. Task Name: new task
+15:10:2022 09:33 [Information] (12) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+15:10:2022 09:33 [Information] (12) Executed DbCommand ("275"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Tasks] ([Deliverables], [EndDate], [StartDate], [TaskName], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [TaskId]
+FROM [Tasks]
+WHERE @@ROWCOUNT = 1 AND [TaskId] = scope_identity();"
+15:10:2022 09:33 [Information] (12) Executing ObjectResult, writing value of type '"System.Boolean"'.
+15:10:2022 09:33 [Information] (12) Executed action "AdminMicroservice.Controllers.TaskController.PostTask (AdminMicroservice)" in 3340.7354ms
+15:10:2022 09:33 [Information] (12) Executed endpoint '"AdminMicroservice.Controllers.TaskController.PostTask (AdminMicroservice)"'
+15:10:2022 09:33 [Information] (12) Request finished in 3692.5215ms 201 application/json; charset=utf-8
+15:10:2022 09:44 [Information] (2) Application is shutting down...
+15:10:2022 09:44 [Warning] (1) Storing keys in a directory '"/root/.aspnet/DataProtection-Keys"' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+15:10:2022 09:44 [Information] (1) User profile is available. Using '"/root/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+15:10:2022 09:44 [Information] (1) Now listening on: "https://[::]:443"
+15:10:2022 09:44 [Information] (1) Now listening on: "http://[::]:80"
+15:10:2022 09:44 [Information] (1) Application started. Press Ctrl+C to shut down.
+15:10:2022 09:44 [Information] (1) Hosting environment: "Development"
+15:10:2022 09:44 [Information] (1) Content root path: "/app"
+15:10:2022 09:45 [Information] (2) Application is shutting down...
+15:10:2022 09:45 [Warning] (1) Storing keys in a directory '"/root/.aspnet/DataProtection-Keys"' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+15:10:2022 09:45 [Information] (1) User profile is available. Using '"/root/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+15:10:2022 09:45 [Information] (1) Now listening on: "https://[::]:443"
+15:10:2022 09:45 [Information] (1) Now listening on: "http://[::]:80"
+15:10:2022 09:45 [Information] (1) Application started. Press Ctrl+C to shut down.
+15:10:2022 09:45 [Information] (1) Hosting environment: "Development"
+15:10:2022 09:45 [Information] (1) Content root path: "/app"
+15:10:2022 09:48 [Information] (13) Request starting HTTP/1.1 PUT https://localhost:49155/admin/users?UserId=4&AllocationPercentage=80  0
+15:10:2022 09:48 [Information] (13) Successfully validated the token.
+15:10:2022 09:48 [Information] (13) Authorization failed.
+15:10:2022 09:48 [Information] (13) AuthenticationScheme: "Bearer" was forbidden.
+15:10:2022 09:48 [Information] (13) Request finished in 284.523ms 403 
+15:10:2022 09:48 [Information] (11) Request starting HTTP/1.1 PUT https://localhost:49155/admin/users?UserId=4&AllocationPercentage=80  0
+15:10:2022 09:48 [Information] (11) Successfully validated the token.
+15:10:2022 09:48 [Information] (11) Authorization was successful.
+15:10:2022 09:48 [Information] (11) Executing endpoint '"AdminMicroservice.Controllers.UsersController.UpdateAllocationPercentage (AdminMicroservice)"'
+15:10:2022 09:48 [Information] (11) Route matched with "{action = \"UpdateAllocationPercentage\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean] UpdateAllocationPercentage(CommonLibrary.BusinessLogic.Models.UpdatePercentage)" on controller "AdminMicroservice.Controllers.UsersController" ("AdminMicroservice").
+15:10:2022 09:48 [Information] (11) Updating allocation percentage for the user
+15:10:2022 09:48 [Information] (11) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+15:10:2022 09:48 [Information] (11) Executed DbCommand ("267"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__p_0"
+15:10:2022 09:48 [Information] (11) updating allocation percentage
+15:10:2022 09:49 [Information] (11) Executed DbCommand ("241"ms) [Parameters=["@p14='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (Size = 4000), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [AllowcationPercentage] = @p0, [Description] = @p1, [EndDate] = @p2, [IsActive] = @p3, [ManagerId] = @p4, [Name] = @p5, [Passcode] = @p6, [Password] = @p7, [ProjectId] = @p8, [RoleId] = @p9, [Skills] = @p10, [StartDate] = @p11, [UserName] = @p12, [YearsOfExperience] = @p13
+WHERE [UserId] = @p14;
+SELECT @@ROWCOUNT;"
+15:10:2022 09:49 [Information] (11) Executing ObjectResult, writing value of type '"System.Boolean"'.
+15:10:2022 09:49 [Information] (11) Executed action "AdminMicroservice.Controllers.UsersController.UpdateAllocationPercentage (AdminMicroservice)" in 3312.3736ms
+15:10:2022 09:49 [Information] (11) Executed endpoint '"AdminMicroservice.Controllers.UsersController.UpdateAllocationPercentage (AdminMicroservice)"'
+15:10:2022 09:49 [Information] (11) Request finished in 3414.4067ms 201 application/json; charset=utf-8
+15:10:2022 09:54 [Information] (23) Request starting HTTP/1.1 PUT https://localhost:49155/admin/users?UserId=4&AllocationPercentage=80  0
+15:10:2022 09:54 [Information] (23) Successfully validated the token.
+15:10:2022 09:54 [Information] (23) Authorization was successful.
+15:10:2022 09:54 [Information] (23) Executing endpoint '"AdminMicroservice.Controllers.UsersController.UpdateAllocationPercentage (AdminMicroservice)"'
+15:10:2022 09:54 [Information] (23) Route matched with "{action = \"UpdateAllocationPercentage\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean] UpdateAllocationPercentage(CommonLibrary.BusinessLogic.Models.UpdatePercentage)" on controller "AdminMicroservice.Controllers.UsersController" ("AdminMicroservice").
+15:10:2022 09:54 [Information] (23) Updating allocation percentage for the user
+15:10:2022 09:54 [Information] (23) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+15:10:2022 09:54 [Information] (23) Executed DbCommand ("217"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__p_0"
+15:10:2022 09:54 [Information] (23) updating allocation percentage
+15:10:2022 09:54 [Information] (23) Executed DbCommand ("216"ms) [Parameters=["@p14='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (Size = 4000), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [AllowcationPercentage] = @p0, [Description] = @p1, [EndDate] = @p2, [IsActive] = @p3, [ManagerId] = @p4, [Name] = @p5, [Passcode] = @p6, [Password] = @p7, [ProjectId] = @p8, [RoleId] = @p9, [Skills] = @p10, [StartDate] = @p11, [UserName] = @p12, [YearsOfExperience] = @p13
+WHERE [UserId] = @p14;
+SELECT @@ROWCOUNT;"
+15:10:2022 09:54 [Information] (23) Executing ObjectResult, writing value of type '"System.Boolean"'.
+15:10:2022 09:54 [Information] (23) Executed action "AdminMicroservice.Controllers.UsersController.UpdateAllocationPercentage (AdminMicroservice)" in 2153.3168ms
+15:10:2022 09:54 [Information] (23) Executed endpoint '"AdminMicroservice.Controllers.UsersController.UpdateAllocationPercentage (AdminMicroservice)"'
+15:10:2022 09:54 [Information] (23) Request finished in 2165.5667ms 201 application/json; charset=utf-8
+15:10:2022 09:54 [Information] (26) Request starting HTTP/1.1 PUT https://localhost:49155/admin/users?UserId=4&AllocationPercentage=70  0
+15:10:2022 09:54 [Information] (26) Successfully validated the token.
+15:10:2022 09:54 [Information] (26) Authorization was successful.
+15:10:2022 09:54 [Information] (26) Executing endpoint '"AdminMicroservice.Controllers.UsersController.UpdateAllocationPercentage (AdminMicroservice)"'
+15:10:2022 09:54 [Information] (26) Route matched with "{action = \"UpdateAllocationPercentage\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Boolean] UpdateAllocationPercentage(CommonLibrary.BusinessLogic.Models.UpdatePercentage)" on controller "AdminMicroservice.Controllers.UsersController" ("AdminMicroservice").
+15:10:2022 09:54 [Information] (26) Updating allocation percentage for the user
+15:10:2022 09:54 [Information] (26) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+15:10:2022 09:54 [Information] (26) Executed DbCommand ("217"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE [u].[UserId] = @__p_0"
+15:10:2022 09:54 [Information] (26) updating allocation percentage
+15:10:2022 09:54 [Information] (26) Executed DbCommand ("217"ms) [Parameters=["@p14='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (Size = 4000), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [AllowcationPercentage] = @p0, [Description] = @p1, [EndDate] = @p2, [IsActive] = @p3, [ManagerId] = @p4, [Name] = @p5, [Passcode] = @p6, [Password] = @p7, [ProjectId] = @p8, [RoleId] = @p9, [Skills] = @p10, [StartDate] = @p11, [UserName] = @p12, [YearsOfExperience] = @p13
+WHERE [UserId] = @p14;
+SELECT @@ROWCOUNT;"
+15:10:2022 09:54 [Information] (26) Executing ObjectResult, writing value of type '"System.Boolean"'.
+15:10:2022 09:54 [Information] (26) Executed action "AdminMicroservice.Controllers.UsersController.UpdateAllocationPercentage (AdminMicroservice)" in 908.4487ms
+15:10:2022 09:54 [Information] (26) Executed endpoint '"AdminMicroservice.Controllers.UsersController.UpdateAllocationPercentage (AdminMicroservice)"'
+15:10:2022 09:54 [Information] (26) Request finished in 918.6958ms 201 application/json; charset=utf-8
+15:10:2022 09:57 [Information] (31) Request starting HTTP/1.1 GET https://localhost:49155/admin/users?userid=2  0
+15:10:2022 09:57 [Information] (31) Successfully validated the token.
+15:10:2022 09:57 [Information] (31) Authorization was successful.
+15:10:2022 09:57 [Information] (31) Executing endpoint '"AdminMicroservice.Controllers.UsersController.GetUser (AdminMicroservice)"'
+15:10:2022 09:57 [Information] (31) Route matched with "{action = \"GetUser\", controller = \"Users\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IList`1[CommonLibrary.BusinessLogic.Models.UserDetails]] GetUser(Int32)" on controller "AdminMicroservice.Controllers.UsersController" ("AdminMicroservice").
+15:10:2022 09:57 [Information] (31) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+15:10:2022 09:57 [Information] (31) Executed DbCommand ("252"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]"
+15:10:2022 09:57 [Information] (31) Executed DbCommand ("217"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ProjectId], [p].[Description], [p].[ProjectName]
+FROM [Projects] AS [p]"
+15:10:2022 09:57 [Information] (31) Executing ObjectResult, writing value of type '"System.Linq.Enumerable+WhereSelectEnumerableIterator`2[[<>f__AnonymousType0`2[[CommonLibrary.Repository.Models.User, CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[CommonLibrary.Repository.Models.Project, CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[CommonLibrary.BusinessLogic.Models.UserDetails, CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+15:10:2022 09:57 [Information] (31) Executed action "AdminMicroservice.Controllers.UsersController.GetUser (AdminMicroservice)" in 553.383ms
+15:10:2022 09:57 [Information] (31) Executed endpoint '"AdminMicroservice.Controllers.UsersController.GetUser (AdminMicroservice)"'
+15:10:2022 09:57 [Information] (31) Request finished in 578.3474ms 200 application/json; charset=utf-8

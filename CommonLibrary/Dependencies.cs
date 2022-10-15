@@ -23,6 +23,8 @@ namespace CommonLibrary
         public static IServiceCollection AddBusiness(this IServiceCollection services)
         {
             services.AddTransient<IUserBusiness, UserBusiness>();
+            services.AddTransient<ITaskBusiness, TaskBusiness>();
+            services.AddTransient<IProjectBusiness, ProjectBusiness>();
 
             //JWT service
             services.AddSingleton<JWTService>();

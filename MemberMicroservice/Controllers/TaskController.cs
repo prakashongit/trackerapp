@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace MemberMicroservice.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("member/[controller]")]
     [Authorize(Roles = "Member")]
     [ApiController]
     public class TaskController : ControllerBase

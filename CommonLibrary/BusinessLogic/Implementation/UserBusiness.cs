@@ -95,7 +95,8 @@ namespace CommonLibrary.BusinessLogic.Implementation
                             Description = userRegistration.Description,
                             Skills = userRegistration.Skills,
                             AllowcationPercentage = userRegistration.AllowcationPercentage,
-                            YearsOfExperience = userRegistration.YearsOfExperience
+                            YearsOfExperience = userRegistration.YearsOfExperience,
+                            ManagerId = userRegistration.ManagerId
                         };
                     }
                     

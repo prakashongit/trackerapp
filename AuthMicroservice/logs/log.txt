@@ -569,3 +569,222 @@ WHERE [r].[RoleId] = @__p_0"
 14:10:2022 20:30 [Information] (4) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 4309.6094ms
 14:10:2022 20:30 [Information] (4) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
 14:10:2022 20:30 [Information] (4) Request finished in 4412.2815ms 200 text/plain; charset=utf-8
+15:10:2022 08:55 [Information] (1) Now listening on: "https://[::]:443"
+15:10:2022 08:55 [Information] (1) Now listening on: "http://[::]:80"
+15:10:2022 08:55 [Information] (1) Application started. Press Ctrl+C to shut down.
+15:10:2022 08:55 [Information] (1) Hosting environment: "Development"
+15:10:2022 08:55 [Information] (1) Content root path: "/app"
+15:10:2022 09:03 [Information] (16) Request starting HTTP/1.1 POST https://localhost:49153/projectmgmt/api/v1/auth/token application/json 65
+15:10:2022 09:03 [Information] (16) Request finished in 32.7208ms 404 
+15:10:2022 09:04 [Information] (22) Request starting HTTP/1.1 POST https://localhost:49153/api/token application/json 65
+15:10:2022 09:04 [Information] (22) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+15:10:2022 09:04 [Information] (22) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+15:10:2022 09:04 [Information] (22) Requested for token
+15:10:2022 09:04 [Information] (22) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+15:10:2022 09:04 [Error] (22) An error occurred using the connection to database '"ProjectManagementTracker"' on server '"tcp:trackerappserver.database.windows.net,1433"'.
+15:10:2022 09:04 [Error] (22) An exception occurred while iterating over the results of a query for context type '"CommonLibrary.Repository.DBContext.ProjectManagementTrackerDBContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=792; handshake=1460; [Login] initialization=2; authentication=9; [Post-Login] complete=28464; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:d81fd6de-50d3-4042-8ec7-0aa16fe7f8e9
+Error Number:-2,State:0,Class:11"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=792; handshake=1460; [Login] initialization=2; authentication=9; [Post-Login] complete=28464; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:d81fd6de-50d3-4042-8ec7-0aa16fe7f8e9
+Error Number:-2,State:0,Class:11
+15:10:2022 09:04 [Error] (22) Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=792; handshake=1460; [Login] initialization=2; authentication=9; [Post-Login] complete=28464; 
+15:10:2022 09:04 [Information] (22) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 31067.7471ms
+15:10:2022 09:04 [Information] (22) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+15:10:2022 09:04 [Error] (22) An unhandled exception has occurred while executing the request.
+System.Exception: Please contact Administrator
+   at AuthMicroservice.Controllers.TokenController.GetToken(LoginDetails loginDetails) in C:\Users\praka\OneDrive\Documents\Work\Cognizant\Project Management Tracker\Backend\ProjectManagementTracker\AuthMicroservice\Controllers\TokenController.cs:line 31
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+15:10:2022 09:04 [Information] (22) Request finished in 31189.9352ms 500 text/plain
+15:10:2022 09:12 [Information] (34) Request starting HTTP/1.1 POST https://localhost:49153/api/token application/json 65
+15:10:2022 09:12 [Information] (34) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+15:10:2022 09:12 [Information] (34) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+15:10:2022 09:12 [Information] (34) Requested for token
+15:10:2022 09:12 [Information] (34) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+15:10:2022 09:12 [Error] (34) An error occurred using the connection to database '"ProjectManagementTracker"' on server '"tcp:trackerappserver.database.windows.net,1433"'.
+15:10:2022 09:12 [Error] (34) An exception occurred while iterating over the results of a query for context type '"CommonLibrary.Repository.DBContext.ProjectManagementTrackerDBContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'trackerappserver' requested by the login. Client with IP address '49.206.46.3' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:c4e7712f-0789-4f1e-a551-3ad7abf7ae26
+Error Number:40615,State:1,Class:14"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'trackerappserver' requested by the login. Client with IP address '49.206.46.3' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:c4e7712f-0789-4f1e-a551-3ad7abf7ae26
+Error Number:40615,State:1,Class:14
+15:10:2022 09:12 [Error] (34) Cannot open server 'trackerappserver' requested by the login. Client with IP address '49.206.46.3' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+15:10:2022 09:12 [Information] (34) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 1538.8597ms
+15:10:2022 09:12 [Information] (34) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+15:10:2022 09:12 [Error] (34) An unhandled exception has occurred while executing the request.
+System.Exception: Please contact Administrator
+   at AuthMicroservice.Controllers.TokenController.GetToken(LoginDetails loginDetails) in C:\Users\praka\OneDrive\Documents\Work\Cognizant\Project Management Tracker\Backend\ProjectManagementTracker\AuthMicroservice\Controllers\TokenController.cs:line 31
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+15:10:2022 09:12 [Information] (34) Request finished in 1555.4282ms 500 text/plain
+15:10:2022 09:14 [Information] (37) Request starting HTTP/1.1 POST https://localhost:49153/api/token application/json 65
+15:10:2022 09:14 [Information] (37) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+15:10:2022 09:14 [Information] (37) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+15:10:2022 09:14 [Information] (37) Requested for token
+15:10:2022 09:14 [Information] (37) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+15:10:2022 09:14 [Information] (37) Executed DbCommand ("322"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+15:10:2022 09:14 [Information] (37) Executed DbCommand ("246"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+15:10:2022 09:14 [Information] (37) Executing ObjectResult, writing value of type '"System.String"'.
+15:10:2022 09:14 [Information] (37) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2663.3809ms
+15:10:2022 09:14 [Information] (37) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+15:10:2022 09:14 [Information] (37) Request finished in 2682.7387ms 200 text/plain; charset=utf-8
+15:10:2022 09:14 [Information] (37) Request starting HTTP/1.1 POST https://localhost:49153/api/token application/json 58
+15:10:2022 09:14 [Information] (37) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+15:10:2022 09:14 [Information] (37) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+15:10:2022 09:14 [Information] (37) Requested for token
+15:10:2022 09:14 [Information] (37) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+15:10:2022 09:14 [Information] (37) Executed DbCommand ("239"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+15:10:2022 09:14 [Information] (37) Executed DbCommand ("240"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+15:10:2022 09:14 [Information] (37) Executing ObjectResult, writing value of type '"System.String"'.
+15:10:2022 09:14 [Information] (37) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 668.2281ms
+15:10:2022 09:14 [Information] (37) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+15:10:2022 09:14 [Information] (37) Request finished in 672.3975ms 200 text/plain; charset=utf-8
+15:10:2022 09:32 [Information] (2) Application is shutting down...
+15:10:2022 09:32 [Information] (1) Now listening on: "https://[::]:443"
+15:10:2022 09:32 [Information] (1) Now listening on: "http://[::]:80"
+15:10:2022 09:32 [Information] (1) Application started. Press Ctrl+C to shut down.
+15:10:2022 09:32 [Information] (1) Hosting environment: "Development"
+15:10:2022 09:32 [Information] (1) Content root path: "/app"
+15:10:2022 09:35 [Information] (11) Request starting HTTP/1.1 POST https://localhost:49153/api/token application/json 67
+15:10:2022 09:35 [Information] (11) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+15:10:2022 09:35 [Information] (11) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+15:10:2022 09:35 [Information] (11) Requested for token
+15:10:2022 09:35 [Information] (11) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+15:10:2022 09:35 [Information] (11) Executed DbCommand ("326"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+15:10:2022 09:35 [Information] (11) Executed DbCommand ("219"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+15:10:2022 09:35 [Information] (11) Executing ObjectResult, writing value of type '"System.String"'.
+15:10:2022 09:35 [Information] (11) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 3396.1956ms
+15:10:2022 09:35 [Information] (11) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+15:10:2022 09:35 [Information] (11) Request finished in 3485.5245ms 200 text/plain; charset=utf-8
+15:10:2022 09:48 [Information] (29) Request starting HTTP/1.1 POST https://localhost:49153/api/token application/json 58
+15:10:2022 09:48 [Information] (29) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+15:10:2022 09:48 [Information] (29) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+15:10:2022 09:48 [Information] (29) Requested for token
+15:10:2022 09:48 [Information] (29) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+15:10:2022 09:48 [Information] (29) Executed DbCommand ("217"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+15:10:2022 09:48 [Information] (29) Executed DbCommand ("217"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+15:10:2022 09:48 [Information] (29) Executing ObjectResult, writing value of type '"System.String"'.
+15:10:2022 09:48 [Information] (29) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2957.4288ms
+15:10:2022 09:48 [Information] (29) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+15:10:2022 09:48 [Information] (29) Request finished in 2970.7681ms 200 text/plain; charset=utf-8
