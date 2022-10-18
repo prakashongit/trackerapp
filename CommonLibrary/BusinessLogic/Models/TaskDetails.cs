@@ -13,5 +13,9 @@ namespace CommonLibrary.BusinessLogic.Models
         public DateTime ProjectEndDate { get; set; }
         public int AllowcationPercentage { get; set; }
         public string Deliverables { get; set; }
+        public string ProjectName { get; set; }
+        public string Skills { get; set; }
+        public int YearsOfExperience { get; set; }
+        public string Name { get; set; }
     }
 }

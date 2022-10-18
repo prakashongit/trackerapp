@@ -11,5 +11,6 @@ namespace CommonLibrary.BusinessLogic.Interface
         string GetToken(LoginDetails loginDetails);
         bool CreateUser(Registration user);
         int MemeberStatusWithUpdate(Registration userRegistration, bool isUpdate = true);
+        IEnumerable<UserDetails> GetAllManagers();
     }
 }

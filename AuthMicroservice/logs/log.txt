@@ -788,3 +788,1235 @@ WHERE [r].[RoleId] = @__p_0"
 15:10:2022 09:48 [Information] (29) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2957.4288ms
 15:10:2022 09:48 [Information] (29) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
 15:10:2022 09:48 [Information] (29) Request finished in 2970.7681ms 200 text/plain; charset=utf-8
+17:10:2022 06:26 [Information] (1) Now listening on: "https://[::]:443"
+17:10:2022 06:26 [Information] (1) Now listening on: "http://[::]:80"
+17:10:2022 06:26 [Information] (1) Application started. Press Ctrl+C to shut down.
+17:10:2022 06:26 [Information] (1) Hosting environment: "Development"
+17:10:2022 06:26 [Information] (1) Content root path: "/app"
+17:10:2022 06:38 [Information] (2) Application is shutting down...
+17:10:2022 06:47 [Information] (1) Now listening on: "https://[::]:443"
+17:10:2022 06:47 [Information] (1) Now listening on: "http://[::]:80"
+17:10:2022 06:47 [Information] (1) Application started. Press Ctrl+C to shut down.
+17:10:2022 06:47 [Information] (1) Hosting environment: "Development"
+17:10:2022 06:47 [Information] (1) Content root path: "/app"
+17:10:2022 06:48 [Information] (10) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 58
+17:10:2022 06:48 [Information] (10) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 06:48 [Information] (10) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 06:48 [Information] (10) Requested for token
+17:10:2022 06:49 [Information] (10) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 06:49 [Error] (10) An error occurred using the connection to database '"ProjectManagementTracker"' on server '"tcp:trackerappserver.database.windows.net,1433"'.
+17:10:2022 06:49 [Error] (10) An exception occurred while iterating over the results of a query for context type '"CommonLibrary.Repository.DBContext.ProjectManagementTrackerDBContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=853; handshake=1405; [Login] initialization=3; authentication=15; [Post-Login] complete=28463; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:0c223c32-963c-4e22-9d3c-8c5dd2adb689
+Error Number:-2,State:0,Class:11"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=853; handshake=1405; [Login] initialization=3; authentication=15; [Post-Login] complete=28463; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:0c223c32-963c-4e22-9d3c-8c5dd2adb689
+Error Number:-2,State:0,Class:11
+17:10:2022 06:49 [Error] (10) Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=853; handshake=1405; [Login] initialization=3; authentication=15; [Post-Login] complete=28463; 
+17:10:2022 06:49 [Information] (10) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 33097.0554ms
+17:10:2022 06:49 [Information] (10) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 06:49 [Error] (10) An unhandled exception has occurred while executing the request.
+System.Exception: Please contact Administrator
+   at AuthMicroservice.Controllers.TokenController.GetToken(LoginDetails loginDetails) in C:\Users\praka\OneDrive\Documents\Work\Cognizant\Project Management Tracker\Backend\ProjectManagementTracker\AuthMicroservice\Controllers\TokenController.cs:line 31
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+17:10:2022 06:49 [Information] (10) Request finished in 33629.7006ms 500 text/plain
+17:10:2022 06:58 [Information] (29) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 20
+17:10:2022 06:58 [Information] (29) CORS policy execution successful.
+17:10:2022 06:58 [Information] (29) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 06:58 [Information] (29) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 06:58 [Information] (29) Requested for token
+17:10:2022 06:58 [Information] (29) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 06:58 [Error] (29) An error occurred using the connection to database '"ProjectManagementTracker"' on server '"tcp:trackerappserver.database.windows.net,1433"'.
+17:10:2022 06:58 [Error] (29) An exception occurred while iterating over the results of a query for context type '"CommonLibrary.Repository.DBContext.ProjectManagementTrackerDBContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'trackerappserver' requested by the login. Client with IP address '49.206.58.251' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:41ec86f4-1c13-4379-ac0a-51bfe28a50a2
+Error Number:40615,State:1,Class:14"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'trackerappserver' requested by the login. Client with IP address '49.206.58.251' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:41ec86f4-1c13-4379-ac0a-51bfe28a50a2
+Error Number:40615,State:1,Class:14
+17:10:2022 06:58 [Error] (29) Cannot open server 'trackerappserver' requested by the login. Client with IP address '49.206.58.251' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+17:10:2022 06:58 [Information] (29) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 1899.5768ms
+17:10:2022 06:58 [Information] (29) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 06:58 [Error] (29) An unhandled exception has occurred while executing the request.
+System.Exception: Please contact Administrator
+   at AuthMicroservice.Controllers.TokenController.GetToken(LoginDetails loginDetails) in C:\Users\praka\OneDrive\Documents\Work\Cognizant\Project Management Tracker\Backend\ProjectManagementTracker\AuthMicroservice\Controllers\TokenController.cs:line 31
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+17:10:2022 06:58 [Information] (29) Request finished in 2045.8952ms 500 text/plain
+17:10:2022 07:00 [Information] (31) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 58
+17:10:2022 07:00 [Information] (31) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:00 [Information] (31) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:00 [Information] (31) Requested for token
+17:10:2022 07:00 [Information] (31) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:00 [Error] (31) An error occurred using the connection to database '"ProjectManagementTracker"' on server '"tcp:trackerappserver.database.windows.net,1433"'.
+17:10:2022 07:00 [Error] (31) An exception occurred while iterating over the results of a query for context type '"CommonLibrary.Repository.DBContext.ProjectManagementTrackerDBContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'trackerappserver' requested by the login. Client with IP address '49.206.58.251' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:8a985a79-2160-41aa-b7a0-ea2c679287a6
+Error Number:40615,State:1,Class:14"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open server 'trackerappserver' requested by the login. Client with IP address '49.206.58.251' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:8a985a79-2160-41aa-b7a0-ea2c679287a6
+Error Number:40615,State:1,Class:14
+17:10:2022 07:00 [Error] (31) Cannot open server 'trackerappserver' requested by the login. Client with IP address '49.206.58.251' is not allowed to access the server.  To enable access, use the Windows Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+17:10:2022 07:00 [Information] (31) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 1840.4808ms
+17:10:2022 07:00 [Information] (31) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:00 [Error] (31) An unhandled exception has occurred while executing the request.
+System.Exception: Please contact Administrator
+   at AuthMicroservice.Controllers.TokenController.GetToken(LoginDetails loginDetails) in C:\Users\praka\OneDrive\Documents\Work\Cognizant\Project Management Tracker\Backend\ProjectManagementTracker\AuthMicroservice\Controllers\TokenController.cs:line 31
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+17:10:2022 07:00 [Information] (31) Request finished in 2016.7194ms 500 text/plain
+17:10:2022 07:06 [Information] (42) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 20
+17:10:2022 07:06 [Information] (42) CORS policy execution successful.
+17:10:2022 07:06 [Information] (42) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:06 [Information] (42) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:06 [Information] (42) Requested for token
+17:10:2022 07:06 [Information] (42) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:06 [Information] (42) Executed DbCommand ("336"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:06 [Error] (42) Value cannot be null. (Parameter 'inputKey')
+17:10:2022 07:06 [Information] (42) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2188.5097ms
+17:10:2022 07:06 [Information] (42) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:06 [Error] (42) An unhandled exception has occurred while executing the request.
+System.Exception: Please contact Administrator
+   at AuthMicroservice.Controllers.TokenController.GetToken(LoginDetails loginDetails) in C:\Users\praka\OneDrive\Documents\Work\Cognizant\Project Management Tracker\Backend\ProjectManagementTracker\AuthMicroservice\Controllers\TokenController.cs:line 31
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+17:10:2022 07:06 [Information] (42) Request finished in 2266.3034ms 500 text/plain
+17:10:2022 07:07 [Information] (49) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 20
+17:10:2022 07:07 [Information] (49) CORS policy execution successful.
+17:10:2022 07:07 [Information] (49) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:07 [Information] (49) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:07 [Information] (49) Requested for token
+17:10:2022 07:07 [Information] (49) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:07 [Information] (49) Executed DbCommand ("238"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:07 [Error] (49) Value cannot be null. (Parameter 'inputKey')
+17:10:2022 07:07 [Information] (49) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 392.2904ms
+17:10:2022 07:07 [Information] (49) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:07 [Error] (49) An unhandled exception has occurred while executing the request.
+System.Exception: Please contact Administrator
+   at AuthMicroservice.Controllers.TokenController.GetToken(LoginDetails loginDetails) in C:\Users\praka\OneDrive\Documents\Work\Cognizant\Project Management Tracker\Backend\ProjectManagementTracker\AuthMicroservice\Controllers\TokenController.cs:line 31
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+17:10:2022 07:07 [Information] (49) Request finished in 465.9952ms 500 text/plain
+17:10:2022 07:08 [Information] (52) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 07:08 [Information] (52) CORS policy execution successful.
+17:10:2022 07:08 [Information] (52) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:08 [Information] (52) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:08 [Information] (52) Requested for token
+17:10:2022 07:08 [Information] (52) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:08 [Information] (52) Executed DbCommand ("225"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:08 [Information] (52) Executed DbCommand ("255"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 07:08 [Information] (52) Executing ObjectResult, writing value of type '"System.String"'.
+17:10:2022 07:08 [Information] (52) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 1257.307ms
+17:10:2022 07:08 [Information] (52) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:08 [Information] (52) Request finished in 1266.4141ms 200 text/plain; charset=utf-8
+17:10:2022 07:09 [Information] (53) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 58
+17:10:2022 07:09 [Information] (53) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:09 [Information] (53) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:09 [Information] (53) Requested for token
+17:10:2022 07:09 [Information] (53) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:09 [Information] (53) Executed DbCommand ("228"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:09 [Information] (53) Executed DbCommand ("251"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 07:09 [Information] (53) Executing ObjectResult, writing value of type '"System.String"'.
+17:10:2022 07:09 [Information] (53) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 971.3905ms
+17:10:2022 07:09 [Information] (53) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:09 [Information] (53) Request finished in 987.2432ms 200 text/plain; charset=utf-8
+17:10:2022 07:11 [Information] (2) Application is shutting down...
+17:10:2022 07:11 [Information] (1) Now listening on: "https://[::]:443"
+17:10:2022 07:11 [Information] (1) Now listening on: "http://[::]:80"
+17:10:2022 07:11 [Information] (1) Application started. Press Ctrl+C to shut down.
+17:10:2022 07:11 [Information] (1) Hosting environment: "Development"
+17:10:2022 07:11 [Information] (1) Content root path: "/app"
+17:10:2022 07:12 [Information] (8) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 58
+17:10:2022 07:12 [Information] (8) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:12 [Information] (8) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:12 [Information] (8) Requested for token
+17:10:2022 07:12 [Information] (8) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:12 [Information] (8) Executed DbCommand ("301"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:12 [Information] (8) Executed DbCommand ("220"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 07:12 [Information] (8) Executing ObjectResult, writing value of type '"System.String"'.
+17:10:2022 07:12 [Information] (8) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 5970.3672ms
+17:10:2022 07:12 [Information] (8) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:12 [Information] (8) Request finished in 6172.0849ms 200 text/plain; charset=utf-8
+17:10:2022 07:12 [Information] (11) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 07:12 [Information] (11) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:12 [Information] (11) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:12 [Information] (11) Requested for token
+17:10:2022 07:12 [Information] (11) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:12 [Information] (11) Executed DbCommand ("217"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:13 [Information] (11) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 07:13 [Information] (11) Executing ObjectResult, writing value of type '"System.String"'.
+17:10:2022 07:13 [Information] (11) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 777.8781ms
+17:10:2022 07:13 [Information] (11) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:13 [Information] (11) Request finished in 798.5052ms 200 text/plain; charset=utf-8
+17:10:2022 07:13 [Information] (2) Application is shutting down...
+17:10:2022 07:14 [Information] (1) Now listening on: "https://[::]:443"
+17:10:2022 07:14 [Information] (1) Now listening on: "http://[::]:80"
+17:10:2022 07:14 [Information] (1) Application started. Press Ctrl+C to shut down.
+17:10:2022 07:14 [Information] (1) Hosting environment: "Development"
+17:10:2022 07:14 [Information] (1) Content root path: "/app"
+17:10:2022 07:14 [Information] (7) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 58
+17:10:2022 07:14 [Information] (7) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:14 [Information] (7) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:14 [Information] (7) Requested for token
+17:10:2022 07:14 [Information] (7) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:14 [Information] (7) Executed DbCommand ("271"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:14 [Information] (7) Executed DbCommand ("219"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 07:14 [Information] (7) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 07:14 [Information] (7) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 4311.4898ms
+17:10:2022 07:14 [Information] (7) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:14 [Information] (7) Request finished in 4485.0547ms 200 application/json; charset=utf-8
+17:10:2022 07:14 [Information] (7) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 07:14 [Information] (7) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:14 [Information] (7) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:14 [Information] (7) Requested for token
+17:10:2022 07:14 [Information] (7) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:14 [Information] (7) Executed DbCommand ("218"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:14 [Information] (7) Executed DbCommand ("254"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 07:14 [Information] (7) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 07:14 [Information] (7) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 914.3737ms
+17:10:2022 07:14 [Information] (7) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:14 [Information] (7) Request finished in 930.0436ms 200 application/json; charset=utf-8
+17:10:2022 07:15 [Information] (12) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 07:15 [Information] (12) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:15 [Information] (12) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:15 [Information] (12) Requested for token
+17:10:2022 07:15 [Information] (12) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:15 [Information] (12) Executed DbCommand ("223"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:15 [Information] (12) Executed DbCommand ("217"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 07:15 [Information] (12) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 07:15 [Information] (12) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 798.0211ms
+17:10:2022 07:15 [Information] (12) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:15 [Information] (12) Request finished in 835.8107ms 200 application/json; charset=utf-8
+17:10:2022 07:16 [Information] (15) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 07:16 [Information] (15) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:16 [Information] (15) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:16 [Information] (15) Requested for token
+17:10:2022 07:16 [Information] (15) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:16 [Information] (15) Executed DbCommand ("219"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:16 [Information] (15) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 07:16 [Information] (15) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 501.6134ms
+17:10:2022 07:16 [Information] (15) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:16 [Information] (15) Request finished in 508.5707ms 200 application/json; charset=utf-8
+17:10:2022 07:17 [Information] (17) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 07:17 [Information] (17) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:17 [Information] (17) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:17 [Information] (17) Requested for token
+17:10:2022 07:17 [Information] (17) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:17 [Information] (17) Executed DbCommand ("219"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:17 [Information] (17) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 07:17 [Information] (17) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 07:17 [Information] (17) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 792.6876ms
+17:10:2022 07:17 [Information] (17) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:17 [Information] (17) Request finished in 814.2019ms 200 application/json; charset=utf-8
+17:10:2022 07:17 [Information] (21) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 07:17 [Information] (21) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:17 [Information] (21) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:17 [Information] (21) Requested for token
+17:10:2022 07:17 [Information] (21) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:17 [Information] (21) Executed DbCommand ("217"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:17 [Information] (21) Executed DbCommand ("216"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 07:17 [Information] (21) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 07:17 [Information] (21) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 696.3285ms
+17:10:2022 07:17 [Information] (21) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:17 [Information] (21) Request finished in 703.4335ms 200 application/json; charset=utf-8
+17:10:2022 07:18 [Information] (22) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 07:18 [Information] (22) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:18 [Information] (22) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:18 [Information] (22) Requested for token
+17:10:2022 07:18 [Information] (22) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:18 [Information] (22) Executed DbCommand ("216"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:18 [Information] (22) Executed DbCommand ("216"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 07:18 [Information] (22) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 07:18 [Information] (22) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 689.6374ms
+17:10:2022 07:18 [Information] (22) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:18 [Information] (22) Request finished in 696.6392ms 200 application/json; charset=utf-8
+17:10:2022 07:28 [Information] (45) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 07:28 [Information] (45) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:28 [Information] (45) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:28 [Information] (45) Requested for token
+17:10:2022 07:28 [Information] (43) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 07:28 [Information] (43) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:28 [Information] (43) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:28 [Information] (45) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:28 [Information] (43) Requested for token
+17:10:2022 07:28 [Information] (43) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:28 [Information] (43) Executed DbCommand ("223"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:28 [Information] (43) Executed DbCommand ("219"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 07:28 [Information] (43) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 07:28 [Information] (43) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2147.3507ms
+17:10:2022 07:28 [Information] (43) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:28 [Information] (43) Request finished in 2161.9994ms 200 application/json; charset=utf-8
+17:10:2022 07:28 [Information] (45) Executed DbCommand ("220"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:28 [Information] (45) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 07:28 [Information] (45) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 07:28 [Information] (45) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 3314.345ms
+17:10:2022 07:28 [Information] (45) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:28 [Information] (45) Request finished in 3352.5638ms 200 application/json; charset=utf-8
+17:10:2022 07:29 [Information] (45) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 49
+17:10:2022 07:29 [Information] (45) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:29 [Information] (45) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 07:29 [Information] (45) Requested for token
+17:10:2022 07:29 [Information] (45) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 07:29 [Information] (45) Executed DbCommand ("227"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 07:29 [Information] (45) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 07:29 [Information] (45) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 07:29 [Information] (45) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 759.8525ms
+17:10:2022 07:29 [Information] (45) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 07:29 [Information] (45) Request finished in 778.9133ms 200 application/json; charset=utf-8
+17:10:2022 08:13 [Information] (60) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 08:13 [Information] (62) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 08:13 [Information] (60) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 08:13 [Information] (62) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 08:13 [Information] (62) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 08:13 [Information] (60) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 08:13 [Information] (60) Requested for token
+17:10:2022 08:13 [Information] (62) Requested for token
+17:10:2022 08:13 [Information] (62) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 08:13 [Information] (60) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 08:13 [Information] (62) Executed DbCommand ("231"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 08:13 [Information] (62) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 08:13 [Information] (62) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 08:13 [Information] (62) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2513.8138ms
+17:10:2022 08:13 [Information] (62) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 08:13 [Information] (62) Request finished in 2596.7302ms 200 application/json; charset=utf-8
+17:10:2022 08:13 [Information] (60) Executed DbCommand ("219"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 08:13 [Information] (60) Executed DbCommand ("217"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 08:13 [Information] (60) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 08:13 [Information] (60) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 3519.9581ms
+17:10:2022 08:13 [Information] (60) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 08:13 [Information] (60) Request finished in 3588.5681ms 200 application/json; charset=utf-8
+17:10:2022 08:43 [Information] (19) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 08:43 [Information] (19) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 08:43 [Information] (19) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 08:43 [Information] (19) Requested for token
+17:10:2022 08:43 [Information] (19) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 08:43 [Information] (19) Executed DbCommand ("222"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 08:43 [Information] (19) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 08:43 [Information] (19) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 08:43 [Information] (19) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2196.2345ms
+17:10:2022 08:43 [Information] (19) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 08:43 [Information] (19) Request finished in 2244.7971ms 200 application/json; charset=utf-8
+17:10:2022 08:59 [Information] (10) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 08:59 [Information] (10) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 08:59 [Information] (10) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 08:59 [Information] (10) Requested for token
+17:10:2022 08:59 [Information] (10) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 08:59 [Information] (10) Executed DbCommand ("218"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 08:59 [Information] (10) Executed DbCommand ("217"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 08:59 [Information] (10) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 08:59 [Information] (10) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2081.3434ms
+17:10:2022 08:59 [Information] (10) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 08:59 [Information] (10) Request finished in 2115.3471ms 200 application/json; charset=utf-8
+17:10:2022 09:00 [Information] (11) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 09:00 [Information] (11) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 09:00 [Information] (11) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 09:00 [Information] (11) Requested for token
+17:10:2022 09:00 [Information] (11) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 09:00 [Information] (11) Executed DbCommand ("247"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 09:00 [Information] (11) Executed DbCommand ("217"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 09:00 [Information] (11) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 09:00 [Information] (11) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 696.4858ms
+17:10:2022 09:00 [Information] (11) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 09:00 [Information] (11) Request finished in 703.0292ms 200 application/json; charset=utf-8
+17:10:2022 09:11 [Information] (36) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 09:11 [Information] (36) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 09:11 [Information] (36) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 09:11 [Information] (36) Requested for token
+17:10:2022 09:11 [Information] (36) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 09:11 [Information] (36) Executed DbCommand ("223"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 09:11 [Information] (36) Executed DbCommand ("222"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 09:11 [Information] (36) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 09:11 [Information] (36) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 1967.0564ms
+17:10:2022 09:11 [Information] (36) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 09:11 [Information] (36) Request finished in 1994.455ms 200 application/json; charset=utf-8
+17:10:2022 10:03 [Information] (59) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 10:03 [Information] (59) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 10:03 [Information] (59) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 10:03 [Information] (59) Requested for token
+17:10:2022 10:03 [Information] (59) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 10:03 [Information] (59) Executed DbCommand ("270"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 10:03 [Information] (59) Executed DbCommand ("233"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 10:03 [Information] (59) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 10:03 [Information] (59) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2155.2366ms
+17:10:2022 10:03 [Information] (59) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 10:03 [Information] (59) Request finished in 2214.6695ms 200 application/json; charset=utf-8
+17:10:2022 11:11 [Information] (33) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 11:11 [Information] (33) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 11:11 [Information] (33) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 11:11 [Information] (33) Requested for token
+17:10:2022 11:11 [Information] (33) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 11:11 [Information] (33) Executed DbCommand ("218"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 11:11 [Information] (33) Executed DbCommand ("217"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 11:11 [Information] (33) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 11:11 [Information] (33) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2060.2945ms
+17:10:2022 11:11 [Information] (33) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 11:11 [Information] (33) Request finished in 2092.2234ms 200 application/json; charset=utf-8
+17:10:2022 11:45 [Information] (84) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 11:45 [Information] (84) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 11:45 [Information] (84) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 11:45 [Information] (84) Requested for token
+17:10:2022 11:45 [Information] (84) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 11:45 [Information] (84) Executed DbCommand ("260"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 11:45 [Information] (84) Executed DbCommand ("258"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 11:45 [Information] (84) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 11:45 [Information] (84) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2288.3184ms
+17:10:2022 11:45 [Information] (84) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 11:45 [Information] (84) Request finished in 2323.9322ms 200 application/json; charset=utf-8
+17:10:2022 12:54 [Information] (10) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 12:54 [Information] (10) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 12:54 [Information] (10) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 12:54 [Information] (10) Requested for token
+17:10:2022 12:54 [Information] (10) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 12:54 [Information] (10) Executed DbCommand ("219"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 12:54 [Information] (10) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 12:54 [Information] (10) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 12:54 [Information] (10) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2079.5043ms
+17:10:2022 12:54 [Information] (10) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 12:54 [Information] (10) Request finished in 2142.4756ms 200 application/json; charset=utf-8
+17:10:2022 12:55 [Information] (7) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 12:55 [Information] (7) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 12:55 [Information] (7) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 12:55 [Information] (7) Requested for token
+17:10:2022 12:55 [Information] (7) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 12:55 [Information] (7) Executed DbCommand ("218"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 12:55 [Information] (7) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 12:55 [Information] (7) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 12:55 [Information] (7) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 680.5214ms
+17:10:2022 12:55 [Information] (7) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 12:55 [Information] (7) Request finished in 689.0537ms 200 application/json; charset=utf-8
+17:10:2022 14:46 [Information] (41) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 14:46 [Information] (41) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 14:46 [Information] (41) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 14:46 [Information] (41) Requested for token
+17:10:2022 14:46 [Information] (41) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 14:46 [Information] (41) Executed DbCommand ("219"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 14:46 [Information] (41) Executed DbCommand ("220"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 14:46 [Information] (41) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 14:46 [Information] (41) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2076.8716ms
+17:10:2022 14:46 [Information] (41) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 14:46 [Information] (41) Request finished in 2130.224ms 200 application/json; charset=utf-8
+17:10:2022 16:18 [Information] (78) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 49
+17:10:2022 16:18 [Information] (78) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 16:18 [Information] (78) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 16:18 [Information] (78) Requested for token
+17:10:2022 16:18 [Information] (78) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 16:18 [Information] (78) Executed DbCommand ("219"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 16:18 [Information] (78) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 16:18 [Information] (78) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 16:18 [Information] (78) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2183.0867ms
+17:10:2022 16:18 [Information] (78) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 16:18 [Information] (78) Request finished in 2236.7522ms 200 application/json; charset=utf-8
+17:10:2022 16:18 [Information] (76) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 49
+17:10:2022 16:18 [Information] (76) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 16:18 [Information] (76) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 16:18 [Information] (76) Requested for token
+17:10:2022 16:18 [Information] (76) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 16:18 [Information] (76) Executed DbCommand ("221"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 16:18 [Information] (76) Executed DbCommand ("219"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 16:18 [Information] (76) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 16:18 [Information] (76) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 664.1358ms
+17:10:2022 16:18 [Information] (76) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 16:18 [Information] (76) Request finished in 668.8937ms 200 application/json; charset=utf-8
+17:10:2022 16:35 [Information] (63) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 16:35 [Information] (63) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 16:35 [Information] (63) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 16:35 [Information] (63) Requested for token
+17:10:2022 16:35 [Information] (63) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 16:35 [Information] (63) Executed DbCommand ("219"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 16:35 [Information] (63) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 16:35 [Information] (63) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 16:35 [Information] (63) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2002.6188ms
+17:10:2022 16:35 [Information] (63) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 16:35 [Information] (63) Request finished in 2029.8004ms 200 application/json; charset=utf-8
+17:10:2022 16:36 [Information] (59) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+17:10:2022 16:36 [Information] (59) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 16:36 [Information] (59) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 16:36 [Information] (59) Requested for token
+17:10:2022 16:36 [Information] (59) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 16:36 [Information] (59) Executed DbCommand ("219"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 16:36 [Information] (59) Executed DbCommand ("224"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 16:36 [Information] (59) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 16:36 [Information] (59) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 663.1099ms
+17:10:2022 16:36 [Information] (59) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 16:36 [Information] (59) Request finished in 673.5387ms 200 application/json; charset=utf-8
+17:10:2022 16:36 [Information] (55) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 49
+17:10:2022 16:36 [Information] (55) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 16:36 [Information] (55) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+17:10:2022 16:36 [Information] (55) Requested for token
+17:10:2022 16:36 [Information] (55) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+17:10:2022 16:36 [Information] (55) Executed DbCommand ("221"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+17:10:2022 16:36 [Information] (55) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+17:10:2022 16:36 [Information] (55) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+17:10:2022 16:36 [Information] (55) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 656.8772ms
+17:10:2022 16:36 [Information] (55) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+17:10:2022 16:36 [Information] (55) Request finished in 661.0764ms 200 application/json; charset=utf-8
+18:10:2022 05:25 [Information] (1) Now listening on: "https://[::]:443"
+18:10:2022 05:25 [Information] (1) Now listening on: "http://[::]:80"
+18:10:2022 05:25 [Information] (1) Application started. Press Ctrl+C to shut down.
+18:10:2022 05:25 [Information] (1) Hosting environment: "Development"
+18:10:2022 05:25 [Information] (1) Content root path: "/app"
+18:10:2022 05:27 [Information] (12) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+18:10:2022 05:27 [Information] (12) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 05:27 [Information] (12) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 05:27 [Information] (12) Requested for token
+18:10:2022 05:27 [Information] (12) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 05:28 [Error] (12) An error occurred using the connection to database '"ProjectManagementTracker"' on server '"tcp:trackerappserver.database.windows.net,1433"'.
+18:10:2022 05:28 [Error] (12) An exception occurred while iterating over the results of a query for context type '"CommonLibrary.Repository.DBContext.ProjectManagementTrackerDBContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=637; handshake=1336; [Login] initialization=2; authentication=10; [Post-Login] complete=28427; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:975ebd1e-2755-411c-b3a1-249cf8ff149b
+Error Number:-2,State:0,Class:11"
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=637; handshake=1336; [Login] initialization=2; authentication=10; [Post-Login] complete=28427; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:975ebd1e-2755-411c-b3a1-249cf8ff149b
+Error Number:-2,State:0,Class:11
+18:10:2022 05:28 [Error] (12) Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=637; handshake=1336; [Login] initialization=2; authentication=10; [Post-Login] complete=28427; 
+18:10:2022 05:28 [Information] (12) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 30637.7224ms
+18:10:2022 05:28 [Information] (12) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 05:28 [Error] (12) An unhandled exception has occurred while executing the request.
+System.Exception: Please contact Administrator
+   at AuthMicroservice.Controllers.TokenController.GetToken(LoginDetails loginDetails) in C:\Users\praka\OneDrive\Documents\Work\Cognizant\Project Management Tracker\Backend\ProjectManagementTracker\AuthMicroservice\Controllers\TokenController.cs:line 33
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+18:10:2022 05:28 [Information] (12) Request finished in 30774.8584ms 500 text/plain
+18:10:2022 05:31 [Information] (19) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+18:10:2022 05:31 [Information] (19) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 05:31 [Information] (19) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 05:31 [Information] (19) Requested for token
+18:10:2022 05:31 [Information] (19) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 05:31 [Information] (19) Executed DbCommand ("335"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 05:31 [Information] (19) Executed DbCommand ("225"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 05:31 [Information] (19) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 05:31 [Information] (19) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 3056.3393ms
+18:10:2022 05:31 [Information] (19) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 05:31 [Information] (19) Request finished in 3124.9147ms 200 application/json; charset=utf-8
+18:10:2022 05:55 [Information] (50) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+18:10:2022 05:55 [Information] (50) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 05:55 [Information] (50) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 05:55 [Information] (50) Requested for token
+18:10:2022 05:55 [Information] (50) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 05:55 [Information] (50) Executed DbCommand ("225"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 05:55 [Information] (50) Executed DbCommand ("219"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 05:55 [Information] (50) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 05:55 [Information] (50) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2243.1743ms
+18:10:2022 05:55 [Information] (50) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 05:55 [Information] (50) Request finished in 2334.4862ms 200 application/json; charset=utf-8
+18:10:2022 07:07 [Information] (29) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 58
+18:10:2022 07:07 [Information] (29) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 07:07 [Information] (29) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 07:07 [Information] (29) Requested for token
+18:10:2022 07:07 [Information] (29) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 07:07 [Information] (29) Executed DbCommand ("268"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 07:07 [Information] (29) Executed DbCommand ("219"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 07:07 [Information] (29) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 07:07 [Information] (29) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 7760.2976ms
+18:10:2022 07:07 [Information] (29) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 07:07 [Information] (29) Request finished in 7845.2227ms 200 application/json; charset=utf-8
+18:10:2022 11:24 [Information] (38) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 43
+18:10:2022 11:24 [Information] (38) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:24 [Information] (38) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 11:24 [Information] (38) Requested for token
+18:10:2022 11:24 [Information] (38) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 11:24 [Information] (38) Executed DbCommand ("223"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 11:24 [Information] (38) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 11:24 [Information] (38) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 1644.9923ms
+18:10:2022 11:24 [Information] (38) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:24 [Information] (38) Request finished in 1722.3338ms 200 application/json; charset=utf-8
+18:10:2022 11:24 [Information] (32) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 43
+18:10:2022 11:24 [Information] (32) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:24 [Information] (32) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 11:24 [Information] (32) Requested for token
+18:10:2022 11:24 [Information] (32) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 11:24 [Information] (32) Executed DbCommand ("219"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 11:24 [Information] (32) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 11:24 [Information] (32) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 237.45ms
+18:10:2022 11:24 [Information] (32) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:24 [Information] (32) Request finished in 246.4174ms 200 application/json; charset=utf-8
+18:10:2022 11:25 [Information] (27) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 59
+18:10:2022 11:25 [Information] (27) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:25 [Information] (27) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 11:25 [Information] (27) Requested for token
+18:10:2022 11:25 [Information] (27) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 11:25 [Information] (27) Executed DbCommand ("228"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 11:25 [Information] (27) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 11:25 [Information] (27) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 338.5527ms
+18:10:2022 11:25 [Information] (27) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:25 [Information] (27) Request finished in 394.9168ms 200 application/json; charset=utf-8
+18:10:2022 11:28 [Information] (16) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+18:10:2022 11:28 [Information] (16) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:28 [Information] (16) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 11:28 [Information] (16) Requested for token
+18:10:2022 11:28 [Information] (16) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 11:28 [Information] (16) Executed DbCommand ("235"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 11:28 [Information] (16) Executed DbCommand ("217"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 11:28 [Information] (16) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 11:28 [Information] (16) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 878.4365ms
+18:10:2022 11:28 [Information] (16) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:28 [Information] (16) Request finished in 922.5962ms 200 application/json; charset=utf-8
+18:10:2022 11:29 [Information] (24) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 47
+18:10:2022 11:29 [Information] (24) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:29 [Information] (24) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 11:29 [Information] (24) Requested for token
+18:10:2022 11:29 [Information] (24) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 11:29 [Information] (24) Executed DbCommand ("218"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 11:29 [Information] (24) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 11:29 [Information] (24) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 11:29 [Information] (24) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 721.7536ms
+18:10:2022 11:29 [Information] (24) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:29 [Information] (24) Request finished in 726.9382ms 200 application/json; charset=utf-8
+18:10:2022 11:43 [Information] (19) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 47
+18:10:2022 11:43 [Information] (19) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:43 [Information] (19) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 11:43 [Information] (19) Requested for token
+18:10:2022 11:43 [Information] (19) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 11:43 [Information] (19) Executed DbCommand ("237"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 11:43 [Information] (19) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 11:43 [Information] (19) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 1601.6691ms
+18:10:2022 11:43 [Information] (19) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:43 [Information] (19) Request finished in 1636.646ms 200 application/json; charset=utf-8
+18:10:2022 11:44 [Information] (23) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 63
+18:10:2022 11:44 [Information] (23) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:44 [Information] (23) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 11:44 [Information] (23) Requested for token
+18:10:2022 11:44 [Information] (23) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 11:44 [Information] (23) Executed DbCommand ("234"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 11:44 [Information] (23) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 11:44 [Information] (23) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 262.9735ms
+18:10:2022 11:44 [Information] (23) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:44 [Information] (23) Request finished in 271.5536ms 200 application/json; charset=utf-8
+18:10:2022 11:45 [Information] (24) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+18:10:2022 11:45 [Information] (24) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:45 [Information] (24) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 11:45 [Information] (24) Requested for token
+18:10:2022 11:45 [Information] (24) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 11:45 [Information] (24) Executed DbCommand ("226"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 11:45 [Information] (24) Executed DbCommand ("217"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 11:45 [Information] (24) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 11:45 [Information] (24) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 813.7681ms
+18:10:2022 11:45 [Information] (24) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:45 [Information] (24) Request finished in 859.7121ms 200 application/json; charset=utf-8
+18:10:2022 11:46 [Information] (29) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 41
+18:10:2022 11:46 [Information] (29) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:46 [Information] (29) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 11:46 [Information] (29) Requested for token
+18:10:2022 11:46 [Information] (29) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 11:46 [Information] (29) Executed DbCommand ("219"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 11:46 [Information] (29) Executed DbCommand ("217"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 11:46 [Information] (29) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 11:46 [Information] (29) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 664.0734ms
+18:10:2022 11:46 [Information] (29) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 11:46 [Information] (29) Request finished in 670.0941ms 200 application/json; charset=utf-8
+18:10:2022 12:25 [Information] (79) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 51
+18:10:2022 12:25 [Information] (79) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 12:25 [Information] (79) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 12:25 [Information] (79) Requested for token
+18:10:2022 12:25 [Information] (79) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 12:25 [Information] (79) Executed DbCommand ("222"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 12:25 [Information] (79) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 12:25 [Information] (79) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 12:25 [Information] (79) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2095.5031ms
+18:10:2022 12:25 [Information] (79) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 12:25 [Information] (79) Request finished in 2143.6426ms 200 application/json; charset=utf-8
+18:10:2022 12:42 [Information] (54) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+18:10:2022 12:42 [Information] (54) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 12:42 [Information] (54) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 12:42 [Information] (54) Requested for token
+18:10:2022 12:42 [Information] (54) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 12:42 [Information] (54) Executed DbCommand ("258"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 12:42 [Information] (54) Executed DbCommand ("256"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 12:42 [Information] (54) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 12:42 [Information] (54) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2338.99ms
+18:10:2022 12:42 [Information] (54) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 12:42 [Information] (54) Request finished in 2403.5296ms 200 application/json; charset=utf-8
+18:10:2022 14:04 [Information] (52) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 51
+18:10:2022 14:04 [Information] (52) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 14:04 [Information] (52) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 14:04 [Information] (52) Requested for token
+18:10:2022 14:04 [Information] (52) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 14:04 [Information] (52) Executed DbCommand ("220"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 14:04 [Information] (52) Executed DbCommand ("237"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 14:04 [Information] (52) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 14:04 [Information] (52) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2296.468ms
+18:10:2022 14:04 [Information] (52) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 14:04 [Information] (52) Request finished in 2359.6561ms 200 application/json; charset=utf-8
+18:10:2022 14:21 [Information] (87) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 51
+18:10:2022 14:21 [Information] (87) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 14:21 [Information] (87) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 14:21 [Information] (87) Requested for token
+18:10:2022 14:21 [Information] (87) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 14:21 [Information] (87) Executed DbCommand ("265"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 14:21 [Information] (87) Executed DbCommand ("219"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 14:21 [Information] (87) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 14:21 [Information] (87) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2643.909ms
+18:10:2022 14:21 [Information] (87) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 14:21 [Information] (87) Request finished in 2687.4508ms 200 application/json; charset=utf-8
+18:10:2022 14:26 [Information] (71) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+18:10:2022 14:26 [Information] (71) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 14:26 [Information] (71) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 14:26 [Information] (71) Requested for token
+18:10:2022 14:26 [Information] (71) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 14:26 [Information] (71) Executed DbCommand ("221"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 14:26 [Information] (71) Executed DbCommand ("218"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 14:26 [Information] (71) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 14:26 [Information] (71) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 737.6936ms
+18:10:2022 14:26 [Information] (71) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 14:26 [Information] (71) Request finished in 760.2912ms 200 application/json; charset=utf-8
+18:10:2022 14:54 [Information] (35) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 51
+18:10:2022 14:54 [Information] (35) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 14:54 [Information] (35) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 14:54 [Information] (35) Requested for token
+18:10:2022 14:54 [Information] (35) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 14:54 [Information] (35) Executed DbCommand ("224"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 14:54 [Information] (35) Executed DbCommand ("220"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 14:54 [Information] (35) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 14:54 [Information] (35) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2240.7658ms
+18:10:2022 14:54 [Information] (35) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 14:54 [Information] (35) Request finished in 2285.3659ms 200 application/json; charset=utf-8
+18:10:2022 15:05 [Information] (17) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 51
+18:10:2022 15:05 [Information] (17) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 15:05 [Information] (17) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 15:05 [Information] (17) Requested for token
+18:10:2022 15:05 [Information] (17) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 15:05 [Information] (17) Executed DbCommand ("220"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 15:05 [Information] (17) Executed DbCommand ("217"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 15:05 [Information] (17) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 15:05 [Information] (17) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 2070.1737ms
+18:10:2022 15:05 [Information] (17) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 15:05 [Information] (17) Request finished in 2132.8851ms 200 application/json; charset=utf-8
+18:10:2022 15:05 [Information] (13) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 51
+18:10:2022 15:05 [Information] (13) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 15:05 [Information] (13) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 15:05 [Information] (13) Requested for token
+18:10:2022 15:05 [Information] (13) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 15:05 [Information] (13) Executed DbCommand ("217"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 15:05 [Information] (13) Executed DbCommand ("216"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 15:05 [Information] (13) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 15:05 [Information] (13) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 658.1382ms
+18:10:2022 15:05 [Information] (13) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 15:05 [Information] (13) Request finished in 664.4387ms 200 application/json; charset=utf-8
+18:10:2022 15:07 [Information] (10) Request starting HTTP/1.1 POST https://localhost:49155/api/token application/json 42
+18:10:2022 15:07 [Information] (10) Executing endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 15:07 [Information] (10) Route matched with "{action = \"GetToken\", controller = \"Token\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CommonLibrary.BusinessLogic.Models.Token] GetToken(CommonLibrary.BusinessLogic.Models.LoginDetails)" on controller "AuthMicroservice.Controllers.TokenController" ("AuthMicroservice").
+18:10:2022 15:07 [Information] (10) Requested for token
+18:10:2022 15:07 [Information] (10) Entity Framework Core "3.1.30" initialized '"ProjectManagementTrackerDBContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CommonLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null "
+18:10:2022 15:07 [Information] (10) Executed DbCommand ("222"ms) [Parameters=["@__ToUpper_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[UserId], [u].[AllowcationPercentage], [u].[Description], [u].[EndDate], [u].[IsActive], [u].[ManagerId], [u].[Name], [u].[Passcode], [u].[Password], [u].[ProjectId], [u].[RoleId], [u].[Skills], [u].[StartDate], [u].[UserName], [u].[YearsOfExperience]
+FROM [Users] AS [u]
+WHERE (UPPER([u].[UserName]) = @__ToUpper_0) AND ([u].[IsActive] = CAST(1 AS bit))"
+18:10:2022 15:07 [Information] (10) Executed DbCommand ("216"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RoleId], [r].[RightsId], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[RoleId] = @__p_0"
+18:10:2022 15:07 [Information] (10) Executing ObjectResult, writing value of type '"CommonLibrary.BusinessLogic.Models.Token"'.
+18:10:2022 15:07 [Information] (10) Executed action "AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)" in 758.9916ms
+18:10:2022 15:07 [Information] (10) Executed endpoint '"AuthMicroservice.Controllers.TokenController.GetToken (AuthMicroservice)"'
+18:10:2022 15:07 [Information] (10) Request finished in 786.4675ms 200 application/json; charset=utf-8

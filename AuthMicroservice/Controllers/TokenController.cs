@@ -19,11 +19,13 @@ namespace AuthMicroservice.Controllers
         }
 
         [HttpPost]
-        public ActionResult<string> GetToken([FromBody] LoginDetails loginDetails) {
+        public ActionResult<Token> GetToken([FromBody] LoginDetails loginDetails) {
             try
             {
                 _logger.LogInformation("Requested for token");
-                return _userBusiness.GetToken(loginDetails);
+                var jwtToken = _userBusiness.GetToken(loginDetails);
+                var token = new Token { JWTToken = jwtToken };
+                return Ok(token);
             }
             catch (System.Exception ex)
             {

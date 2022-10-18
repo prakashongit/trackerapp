@@ -39,10 +39,12 @@ namespace AdminMicroservice.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IList<UserDetails>> GetUser([FromQuery] int userid)
+        public ActionResult<IList<UserDetails>> GetUsers([FromQuery] int userid)
         {
             try
             {
+                if(userid == 0)
+                    return Ok(_userBusiness.GetAllManagers());
                 return Ok(_userBusiness.GetMyUsers(userid));
             }
             catch (System.Exception ex)

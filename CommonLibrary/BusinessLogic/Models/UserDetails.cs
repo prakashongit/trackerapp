@@ -14,5 +14,6 @@ namespace CommonLibrary.BusinessLogic.Models
         public string ProjectName { get; set; }
         public string Skills { get; set; }
         public int UserId { get; set; }
+        public int YearsOfExperience { get; set; }
     }
 }

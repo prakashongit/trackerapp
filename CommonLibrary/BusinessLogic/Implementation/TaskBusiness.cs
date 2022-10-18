@@ -47,18 +47,24 @@ namespace CommonLibrary.BusinessLogic.Implementation
             try
             {
                 _logger.LogInformation($"Getting All task details for the userid. UserId: {userid}");
-                var tasks = from task in _unitOfWork.Tasks.GetAll() 
-                               join u in _unitOfWork.Users.GetAll() on task.UserId equals u.UserId
-
-                               select new TaskDetails
+                var tasks = from u in _unitOfWork.Users.GetAll()
+                            join p in _unitOfWork.Projects.GetAll() on u.ProjectId equals p.ProjectId
+                            join task in _unitOfWork.Tasks.GetAll()  on u.UserId equals task.UserId into ts
+                            from taskDetail in ts.DefaultIfEmpty()
+                            where u.UserId == userid
+                            select new TaskDetails
                                {
-                                   TaskName = task.TaskName,
-                                   TaskStartDate = task.StartDate,
-                                   TaskEndDate = task.EndDate,
+                                   TaskName = taskDetail?.TaskName,
+                                   TaskStartDate = taskDetail == null? new DateTime() : taskDetail.StartDate,
+                                   TaskEndDate = taskDetail == null ? new DateTime() : taskDetail.EndDate,
                                    ProjectStartDate = u.StartDate,
                                    ProjectEndDate = u.EndDate,
+                                   ProjectName = p.ProjectName,
                                    AllowcationPercentage = u.AllowcationPercentage,
-                                   Deliverables = task.Deliverables
+                                   Deliverables = taskDetail?.Deliverables,
+                                   Skills = u.Skills,
+                                   YearsOfExperience = u.YearsOfExperience,
+                                   Name = u.Name
                                };
                 return tasks;
             }

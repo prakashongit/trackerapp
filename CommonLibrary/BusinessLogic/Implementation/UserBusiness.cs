@@ -28,7 +28,7 @@ namespace CommonLibrary.BusinessLogic.Implementation
         {
             var users = from u in _unitOfWork.Users.GetAll()
                         join project in _unitOfWork.Projects.GetAll() on u.ProjectId equals project.ProjectId
-                        where managerId == u.ManagerId.GetValueOrDefault()
+                        where managerId == u.ManagerId.GetValueOrDefault() && u.IsActive
                         select new UserDetails {
                             Name = u.Name,
                             UserName = u.UserName,
@@ -37,7 +37,8 @@ namespace CommonLibrary.BusinessLogic.Implementation
                             AllowcationPercentage = u.AllowcationPercentage,
                             ProjectName = project.ProjectName,
                             Skills = u.Skills,
-                            UserId = u.UserId
+                            UserId = u.UserId,
+                            YearsOfExperience = u.YearsOfExperience
                         };
             return users;
         }
@@ -79,7 +80,8 @@ namespace CommonLibrary.BusinessLogic.Implementation
                             Password = BCrypt.Net.BCrypt.HashPassword(userRegistration.Password),
                             RoleId = userRegistration.RoleId,
                             UserName = userRegistration.UserName,
-                            Name = userRegistration.Name
+                            Name = userRegistration.Name,
+                            IsActive = true
                         };
                     }
                     else if(userRegistration.RoleId == (int)Roles.Member) {
@@ -153,6 +155,25 @@ namespace CommonLibrary.BusinessLogic.Implementation
                 throw ex;
             }
             return status;
+        }
+
+        public IEnumerable<UserDetails> GetAllManagers() {
+            try
+            {
+                var users = from u in _unitOfWork.Users.Find(u => u.ManagerId == null).OrderByDescending(u => u.YearsOfExperience)
+                            select new UserDetails
+                            {
+                                UserName = u.UserName,
+                                Name = u.Name,
+                                YearsOfExperience = u.YearsOfExperience
+                            };
+                return users;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

@@ -25,11 +25,13 @@ namespace MemberMicroservice.Controllers
         }
 
         [HttpPost("status")]
-        public ActionResult<int> CheckStatus([FromBody] Registration user)
+        public ActionResult<StatusInfo> CheckStatus([FromBody] Registration user)
         {
             try
             {
-                return Ok(_userBusiness.MemeberStatusWithUpdate(user,false));
+                StatusInfo status = new StatusInfo();
+                status.Code = _userBusiness.MemeberStatusWithUpdate(user, false);
+                return Ok(status);
             }
             catch (System.Exception ex)
             {
@@ -39,11 +41,13 @@ namespace MemberMicroservice.Controllers
         }
 
         [HttpPost("update")]
-        public ActionResult<int> UpdateMemberDetails([FromBody] Registration user)
+        public ActionResult<StatusInfo> UpdateMemberDetails([FromBody] Registration user)
         {
             try
             {
-                return Created(nameof(UpdateMemberDetails), _userBusiness.MemeberStatusWithUpdate(user));
+                StatusInfo status = new StatusInfo();
+                status.Code = _userBusiness.MemeberStatusWithUpdate(user);
+                return Created(nameof(UpdateMemberDetails), status);
             }
             catch (System.Exception ex)
             {
